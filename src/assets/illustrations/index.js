@@ -1,0 +1,8 @@
+export { default as Sun } from './Sun.jsx'
+export { default as Heart } from './Heart.jsx'
+export { default as Cloud } from './Cloud.jsx'
+export { default as Star } from './Star.jsx'
+export { default as Blob } from './Blob.jsx'
+export { default as WaveDivider } from './WaveDivider.jsx'
+export { default as Logo } from './Logo.jsx'
+export { default as Blocks } from './Blocks.jsx'

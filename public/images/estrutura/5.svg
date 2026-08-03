@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#EBE0F7"/>
+  <rect x="260" y="150" width="280" height="200" rx="14" fill="#9C6FCE" opacity="0.9"/>
+  <rect x="290" y="180" width="220" height="20" rx="6" fill="#F6F1FB"/>
+  <rect x="290" y="215" width="180" height="20" rx="6" fill="#F6F1FB"/>
+  <rect x="290" y="250" width="200" height="20" rx="6" fill="#F6F1FB"/>
+  <circle cx="640" cy="450" r="50" fill="#FDB913"/>
+  <text x="400" y="560" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#382155" font-weight="700">Cantinho da leitura</text>
+</svg>

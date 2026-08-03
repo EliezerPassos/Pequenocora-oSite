@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FFE79A"/>
+  <rect x="220" y="300" width="150" height="150" rx="16" fill="#7F4FB8"/>
+  <rect x="380" y="240" width="150" height="150" rx="16" fill="#9C6FCE" opacity="0.85"/>
+  <rect x="470" y="330" width="120" height="120" rx="16" fill="#FDB913" opacity="0.9"/>
+  <text x="400" y="560" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#4d2d75" font-weight="700">Área de brinquedos</text>
+</svg>

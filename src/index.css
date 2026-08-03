@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/*
+  Paleta CEI Pequeno Coração
+  - Amarelo = alegria/infância (cor primária)
+  - Roxo = acolhimento/cuidado (cor secundária)
+  - Preto (tom "tinta" quente, nunca 100% puro) = apoio, textos e contornos
+*/
+@theme {
+  --font-display: "Baloo 2", "Comic Sans MS", system-ui, sans-serif;
+  --font-body: "Nunito Sans", system-ui, -apple-system, sans-serif;
+
+  /* Amarelo — sol, alegria */
+  --color-sun-50: #fffbeb;
+  --color-sun-100: #fff3c4;
+  --color-sun-200: #ffe79a;
+  --color-sun-300: #ffd966;
+  --color-sun-400: #ffca33;
+  --color-sun-500: #fdb913;
+  --color-sun-600: #e29900;
+  --color-sun-700: #b87600;
+
+  /* Roxo — acolhimento, cuidado */
+  --color-bloom-50: #f6f1fb;
+  --color-bloom-100: #ebe0f7;
+  --color-bloom-200: #d6c0ef;
+  --color-bloom-300: #b997e0;
+  --color-bloom-400: #9c6fce;
+  --color-bloom-500: #7f4fb8;
+  --color-bloom-600: #653c98;
+  --color-bloom-700: #4d2d75;
+  --color-bloom-800: #382155;
+
+  /* Preto quente — apoio apenas (textos, contornos) */
+  --color-ink-950: #221a2e;
+  --color-ink-800: #382a4a;
+  --color-ink-600: #5a4a6e;
+
+  /* Fundo cremoso, nunca branco puro */
+  --color-cream-50: #fffdf7;
+  --color-cream-100: #fff9ec;
+
+  --shadow-soft: 0 12px 32px -12px rgb(56 33 85 / 0.25);
+  --radius-blob: 42% 58% 65% 35% / 45% 40% 60% 55%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink-950);
+  background-color: var(--color-cream-50);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Quando o Lenis assume o controle do scroll, evita duplicar o easing nativo */
+html.lenis {
+  scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
