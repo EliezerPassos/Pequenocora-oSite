@@ -14,10 +14,12 @@ export default function Gallery() {
 
         {/* TODO: substituir as imagens em public/images/estrutura por fotos reais da creche */}
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {galleryItems.map((item) => (
+          {galleryItems.map((item, index) => (
             <figure
               key={item.label}
-              className="group overflow-hidden rounded-3xl bg-white shadow-soft"
+              className={`group overflow-hidden rounded-3xl border-b-4 bg-white shadow-soft ${
+                index % 2 === 0 ? 'border-bloom-500' : 'border-sun-400'
+              }`}
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img

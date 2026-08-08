@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-ink-950 pt-16 text-cream-100">
+    <footer className="border-t-4 border-sun-400 bg-ink-950 pt-16 text-cream-100">
       <Container className="grid gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2.5 font-display text-lg font-bold text-cream-50">
