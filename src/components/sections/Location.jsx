@@ -28,13 +28,16 @@ export default function Location() {
           <div className="flex flex-col gap-6 rounded-3xl bg-bloom-600 p-8 text-cream-50 shadow-soft lg:col-span-2">
             <div>
               <h3 className="font-display text-lg font-bold text-sun-300">Endereço</h3>
-              {/* TODO: substituir por endereço real */}
               <p className="mt-2 leading-relaxed">
                 {address.street}
                 <br />
                 {address.neighborhood} — {address.city}/{address.state}
-                <br />
-                CEP {address.zip}
+                {address.zip && (
+                  <>
+                    <br />
+                    CEP {address.zip}
+                  </>
+                )}
               </p>
             </div>
 

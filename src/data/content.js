@@ -2,23 +2,23 @@
 
 export const siteInfo = {
   name: 'CEI Pequeno Coração',
-  whatsappNumber: '5547999999999', // TODO: número real do WhatsApp (formato internacional, só dígitos)
+  whatsappNumber: '5547989249171',
   whatsappMessage: 'Olá! Gostaria de saber mais sobre as matrículas do CEI Pequeno Coração.',
-  phone: '(47) 99999-9999',
+  phone: '(47) 98924-9171',
   email: 'contato@pequenocoracao.com.br',
   address: {
-    street: 'Rua das Acácias, 123',
+    street: 'R. George Fridrich Mordhorst, 47',
     neighborhood: 'Itoupava Central',
     city: 'Blumenau',
     state: 'SC',
-    zip: '89075-000',
+    zip: '',
   },
   hours: [
     { day: 'Segunda a sexta-feira', time: '6h30 às 18h30' },
     { day: 'Sábados, domingos e feriados', time: 'Fechado' },
   ],
   mapEmbedSrc:
-    'https://www.google.com/maps?q=Itoupava+Central,+Blumenau+-+SC&output=embed',
+    'https://www.google.com/maps?q=R.+George+Fridrich+Mordhorst,+47,+Itoupava+Central,+Blumenau+-+SC&output=embed',
   social: {
     instagram: 'https://instagram.com/', // TODO
     facebook: 'https://facebook.com/', // TODO
