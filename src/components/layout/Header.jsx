@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 import WhatsAppIcon from '../ui/WhatsAppIcon.jsx'
-import { Logo } from '../../assets/illustrations/index.js'
 import { navLinks, siteInfo } from '../../data/content.js'
 import useWhatsAppLink from '../../hooks/useWhatsAppLink.js'
 
@@ -23,7 +22,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-bloom-100 bg-cream-50/95 backdrop-blur-sm">
       <Container className="flex h-20 items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2.5 font-display text-lg font-bold text-bloom-700">
-          <Logo className="h-11 w-11 shrink-0" />
+          <img src="/logocoracao.jpg" alt="" className="h-11 w-11 shrink-0 rounded-full object-cover" />
           <span className="leading-tight">
             {siteInfo.name}
           </span>
