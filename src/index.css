@@ -48,6 +48,45 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Cartões de "papel" — recortes colados sobre a página, estilo colagem artesanal */
+.paper-card {
+  background-color: #fdfbf7;
+  border-radius: 1.5rem;
+  box-shadow:
+    0 14px 28px -12px rgb(56 33 85 / 0.22),
+    0 3px 8px -3px rgb(56 33 85 / 0.14);
+}
+
+/* Fotos com efeito adesivo/recorte, bordas grossas e leve rotação */
+.photo-sticker {
+  border: 6px solid #fff;
+  border-radius: 1rem;
+  box-shadow:
+    0 16px 30px -10px rgb(34 26 46 / 0.35),
+    0 4px 10px -2px rgb(34 26 46 / 0.2);
+}
+
+.photo-sticker--tilt-left {
+  transform: rotate(-1.5deg);
+}
+
+.photo-sticker--tilt-right {
+  transform: rotate(1.5deg);
+}
+
+/* Texturas de poá sutis para reforçar a identidade visual sobre fundos coloridos */
+.dots-on-dark {
+  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  color: rgb(255 255 255 / 0.16);
+}
+
+.dots-on-light {
+  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  color: rgb(101 60 152 / 0.14);
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);

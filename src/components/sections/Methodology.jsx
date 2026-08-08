@@ -1,12 +1,12 @@
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
-import { Sun, Star, WaveDivider } from '../../assets/illustrations/index.js'
+import { Sun, Star, TornEdge } from '../../assets/illustrations/index.js'
 import { ageGroups, dailyRoutine } from '../../data/content.js'
 
 export default function Methodology() {
   return (
     <section id="metodologia" className="relative overflow-hidden bg-bloom-700 py-24 sm:py-28">
-      <WaveDivider className="absolute -top-px left-0 h-16 w-full rotate-180 text-cream-50" />
+      <div className="dots-on-dark pointer-events-none absolute inset-0" aria-hidden="true" />
       <Sun className="pointer-events-none absolute -right-8 top-24 h-28 w-28 text-bloom-600/60" />
       <Star className="pointer-events-none absolute left-10 bottom-16 h-8 w-8 text-sun-300/70" />
 
@@ -35,7 +35,7 @@ export default function Methodology() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-3xl bg-cream-50 p-7 shadow-soft sm:p-10">
+        <div className="paper-card mt-16 p-7 sm:p-10">
           <h3 className="font-display text-2xl font-bold text-bloom-700">
             Rotina diária
           </h3>
@@ -51,6 +51,8 @@ export default function Methodology() {
           </ol>
         </div>
       </Container>
+
+      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-cream-50" />
     </section>
   )
 }

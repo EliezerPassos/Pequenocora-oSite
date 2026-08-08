@@ -17,8 +17,8 @@ export default function Gallery() {
           {galleryItems.map((item, index) => (
             <figure
               key={item.label}
-              className={`group overflow-hidden rounded-3xl border-b-4 bg-white shadow-soft ${
-                index % 2 === 0 ? 'border-bloom-500' : 'border-sun-400'
+              className={`photo-sticker group overflow-hidden bg-white transition-transform duration-200 hover:scale-[1.02] ${
+                index % 2 === 0 ? 'photo-sticker--tilt-left' : 'photo-sticker--tilt-right'
               }`}
             >
               <div className="aspect-[4/3] overflow-hidden">

@@ -1,16 +1,16 @@
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
-import { Blob, Blocks, Heart } from '../../assets/illustrations/index.js'
+import { Blob, Blocks, Heart, TornEdge } from '../../assets/illustrations/index.js'
 import { values } from '../../data/content.js'
 
 export default function About() {
   return (
-    <section id="sobre" className="bg-cream-50 py-20 sm:py-28">
+    <section id="sobre" className="relative overflow-hidden bg-cream-50 py-20 sm:py-28">
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div className="relative mx-auto aspect-[4/3] w-full max-w-lg order-2 lg:order-1">
             <Blob className="absolute inset-0 h-full w-full text-sun-200" />
-            <div className="absolute inset-8 flex items-center justify-center rounded-[50%_50%_45%_55%/40%_45%_55%_60%] bg-bloom-100">
+            <div className="photo-sticker photo-sticker--tilt-right absolute inset-10 flex items-center justify-center bg-bloom-100">
               {/* TODO: substituir por foto real da equipe/fachada da creche */}
               <div className="flex flex-col items-center gap-3 text-bloom-700">
                 <Blocks className="h-16 w-16" />
@@ -49,7 +49,7 @@ export default function About() {
             return (
               <div
                 key={value.title}
-                className="flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-soft transition-transform duration-200 hover:-translate-y-1"
+                className="paper-card flex flex-col gap-4 p-6 transition-transform duration-200 hover:-translate-y-1"
               >
                 <span
                   className={`flex h-12 w-12 items-center justify-center rounded-2xl ${
@@ -67,6 +67,8 @@ export default function About() {
           })}
         </div>
       </Container>
+
+      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-bloom-700" />
     </section>
   )
 }

@@ -57,7 +57,7 @@ export default function Testimonials() {
             <blockquote
               key={item.name}
               data-card
-              className="w-[85%] shrink-0 snap-start rounded-3xl bg-white p-7 shadow-soft sm:w-[45%] lg:w-[31%]"
+              className="paper-card w-[85%] shrink-0 snap-start p-7 sm:w-[45%] lg:w-[31%]"
             >
               <Heart className="h-7 w-7 text-sun-500" />
               <p className="mt-4 text-lg leading-relaxed text-ink-800">

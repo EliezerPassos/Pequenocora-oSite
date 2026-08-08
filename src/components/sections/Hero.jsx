@@ -1,7 +1,7 @@
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 import WhatsAppIcon from '../ui/WhatsAppIcon.jsx'
-import { Sun, Heart, Cloud, Star, Blob, WaveDivider } from '../../assets/illustrations/index.js'
+import { Sun, Heart, Cloud, Star, Blob, TornEdge } from '../../assets/illustrations/index.js'
 import useWhatsAppLink from '../../hooks/useWhatsAppLink.js'
 
 export default function Hero() {
@@ -9,6 +9,8 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="relative overflow-hidden bg-sun-50 pb-28 pt-16 sm:pt-20">
+      {/* Textura de poá sutil, reforçando a identidade da marca */}
+      <div className="dots-on-light pointer-events-none absolute inset-0" aria-hidden="true" />
       {/* Decorações de fundo — puramente ilustrativas */}
       <Cloud className="pointer-events-none absolute -left-6 top-10 h-16 w-auto text-white sm:h-20" />
       <Cloud className="pointer-events-none absolute right-4 top-28 h-12 w-auto text-white sm:h-16" />
@@ -46,7 +48,7 @@ export default function Hero() {
 
         <div className="relative mx-auto aspect-square w-full max-w-md">
           <Blob className="absolute inset-0 h-full w-full text-bloom-200" />
-          <div className="absolute inset-6 flex items-center justify-center rounded-[45%_55%_60%_40%/45%_40%_60%_55%] bg-sun-300">
+          <div className="photo-sticker photo-sticker--tilt-left absolute inset-10 flex items-center justify-center bg-sun-300">
             {/* TODO: substituir por foto real das crianças/estrutura da creche */}
             <div className="flex flex-col items-center gap-3 text-bloom-800">
               <Heart className="h-20 w-20 sm:h-24 sm:w-24" />
@@ -59,7 +61,7 @@ export default function Hero() {
         </div>
       </Container>
 
-      <WaveDivider className="absolute -bottom-px left-0 h-16 w-full text-cream-50" />
+      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-cream-50" />
     </section>
   )
 }

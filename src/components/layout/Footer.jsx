@@ -1,12 +1,13 @@
 import Container from '../ui/Container.jsx'
-import { Heart } from '../../assets/illustrations/index.js'
+import { Heart, TornEdge } from '../../assets/illustrations/index.js'
 import { navLinks, siteInfo } from '../../data/content.js'
 
 export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t-4 border-sun-400 bg-ink-950 pt-16 text-cream-100">
+    <footer className="relative overflow-hidden bg-ink-950 pt-16 text-cream-100">
+      <TornEdge flip className="absolute -top-px left-0 h-14 w-full text-ink-950" />
       <Container className="grid gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2.5 font-display text-lg font-bold text-cream-50">
