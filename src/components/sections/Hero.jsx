@@ -22,7 +22,7 @@ export default function Hero() {
 
       {/* Painel mobile: conteúdo ancorado no rodapé de um painel de foto em tela cheia */}
       <Container className="relative lg:hidden">
-        <div className="relative h-[64dvh] min-h-[420px] overflow-hidden rounded-[32px] shadow-soft">
+        <div className="relative min-h-[560px] overflow-hidden rounded-[32px] shadow-soft">
           {/* TODO: as fotos em public/Cards são temporárias — trocar pelas fotos reais das crianças/estrutura da creche */}
           <AutoPhotoCarousel />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
