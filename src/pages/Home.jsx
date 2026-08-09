@@ -1,5 +1,4 @@
 import Hero from '../components/sections/Hero.jsx'
-import About from '../components/sections/About.jsx'
 import LeaderInEarlyEducation from '../components/sections/LeaderInEarlyEducation.jsx'
 import Methodology from '../components/sections/Methodology.jsx'
 import BiaPlaylist from '../components/sections/BiaPlaylist.jsx'
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
       <LeaderInEarlyEducation />
       <Methodology />
       <BiaPlaylist />

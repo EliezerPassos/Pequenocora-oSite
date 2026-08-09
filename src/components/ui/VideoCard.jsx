@@ -34,7 +34,6 @@ export default function VideoCard({ video, index = 0, onPlay }) {
           <img
             src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
             alt=""
-            loading="lazy"
             className="absolute inset-0 h-full w-full object-cover"
           />
         ) : (

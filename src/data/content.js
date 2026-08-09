@@ -29,7 +29,7 @@ export const siteInfo = {
 
 export const navLinks = [
   { label: 'Início', href: '#inicio' },
-  { label: 'Sobre', href: '#sobre' },
+  { label: 'Referência em cuidado', href: '#referencia-em-cuidado' },
   { label: 'Metodologia', href: '#metodologia' },
   { label: 'Momento com a Bia', href: '#momento-com-a-bia' },
   { label: 'Blog', href: '/blog' },

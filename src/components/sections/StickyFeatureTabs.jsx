@@ -39,7 +39,7 @@ export default function StickyFeatureTabs() {
   const isPurple = active.color === 'bloom'
 
   return (
-    <div className="relative h-[3200px] lg:h-[2560px]">
+    <div className="relative h-[2400px] lg:h-[2560px]">
       {/* Marcadores invisíveis: cada um ocupa uma fatia do scroll e ativa sua aba
           correspondente quando cruza o centro da tela — em qualquer tamanho de tela,
           o scroll é "travado" nessa seção até passar pelos 4 cards. */}

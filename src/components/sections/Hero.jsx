@@ -1,6 +1,7 @@
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 import WhatsAppIcon from '../ui/WhatsAppIcon.jsx'
+import AutoPhotoCarousel from '../ui/AutoPhotoCarousel.jsx'
 import { Sun, Heart, Cloud, Star, Blob, TornEdge } from '../../assets/illustrations/index.js'
 import useWhatsAppLink from '../../hooks/useWhatsAppLink.js'
 
@@ -21,14 +22,12 @@ export default function Hero() {
 
       {/* Painel mobile: conteúdo ancorado no rodapé de um painel de foto em tela cheia */}
       <Container className="relative lg:hidden">
-        <div className="relative min-h-[560px] overflow-hidden rounded-[32px] bg-sun-300 shadow-soft">
-          {/* TODO: substituir por foto real das crianças/estrutura da creche */}
-          <div className="absolute inset-0 flex items-center justify-center text-bloom-800">
-            <Heart className="h-20 w-20" />
-          </div>
+        <div className="relative min-h-[560px] overflow-hidden rounded-[32px] shadow-soft">
+          {/* TODO: as fotos em public/Cards são temporárias — trocar pelas fotos reais das crianças/estrutura da creche */}
+          <AutoPhotoCarousel />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
 
-          <div className="relative z-10 flex h-full flex-col justify-end gap-8 px-6 pb-8 pt-16">
+          <div className="relative z-10 flex h-full flex-col gap-8 px-6 pb-8 pt-16">
             <div className="flex flex-col gap-2">
               <span className="font-display text-sm font-semibold text-cream-50/90">
                 Itoupava Central, Blumenau/SC
@@ -38,7 +37,7 @@ export default function Hero() {
               </h1>
             </div>
 
-            <Button as="a" href="#rotina" variant="secondary" className="w-full justify-center">
+            <Button as="a" href="#rotina" variant="secondary" className="mt-auto w-full justify-center">
               Veja um dia na Pequeno Coração
             </Button>
           </div>
@@ -76,14 +75,9 @@ export default function Hero() {
 
         <div className="relative mx-auto aspect-square w-full max-w-md">
           <Blob className="absolute inset-0 h-full w-full text-bloom-200" />
-          <div className="photo-sticker photo-sticker--tilt-left absolute inset-10 flex items-center justify-center bg-sun-300">
-            {/* TODO: substituir por foto real das crianças/estrutura da creche */}
-            <div className="flex flex-col items-center gap-3 text-bloom-800">
-              <Heart className="h-20 w-20 sm:h-24 sm:w-24" />
-              <span className="font-display text-sm font-semibold">
-                Foto ilustrativa — em breve
-              </span>
-            </div>
+          <div className="photo-sticker photo-sticker--tilt-left absolute inset-10 overflow-hidden">
+            {/* TODO: as fotos em public/Cards são temporárias — trocar pelas fotos reais das crianças/estrutura da creche */}
+            <AutoPhotoCarousel />
           </div>
           <Sun className="absolute -right-3 -top-3 h-16 w-16 text-sun-500 sm:h-20 sm:w-20" />
         </div>
