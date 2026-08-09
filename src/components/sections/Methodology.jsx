@@ -5,14 +5,13 @@ import { ageGroups, dailyRoutine } from '../../data/content.js'
 
 export default function Methodology() {
   return (
-    <section id="metodologia" className="relative overflow-hidden bg-bloom-700 py-24 sm:py-28">
-      <div className="dots-on-dark pointer-events-none absolute inset-0" aria-hidden="true" />
-      <Sun className="pointer-events-none absolute -right-8 top-24 h-28 w-28 text-bloom-600/60" />
-      <Star className="pointer-events-none absolute left-10 bottom-16 h-8 w-8 text-sun-300/70" />
+    <section id="metodologia" className="relative overflow-hidden bg-cream-50 py-24 sm:py-28">
+      <div className="dots-on-light pointer-events-none absolute inset-0" aria-hidden="true" />
+      <Sun className="pointer-events-none absolute -right-8 top-24 h-28 w-28 text-bloom-100" />
+      <Star className="pointer-events-none absolute left-10 bottom-16 h-8 w-8 text-sun-400" />
 
       <Container className="relative">
         <SectionHeading
-          light
           eyebrow="Proposta pedagógica"
           title="Aprender brincando, em cada fase da infância"
           description="Nossa metodologia respeita as particularidades de cada faixa etária, com atividades que estimulam a autonomia, a criatividade e o convívio social."
@@ -22,15 +21,15 @@ export default function Methodology() {
           {ageGroups.map((group) => (
             <div
               key={group.range}
-              className="flex flex-col gap-3 rounded-3xl bg-bloom-600/50 p-7 ring-1 ring-white/10 backdrop-blur-sm"
+              className="flex flex-col gap-3 rounded-[24px] border border-bloom-100 bg-bloom-50 p-7 shadow-soft"
             >
-              <span className="font-display text-sm font-bold uppercase tracking-wide text-sun-300">
+              <span className="font-display text-sm font-bold uppercase tracking-wide text-bloom-500">
                 {group.ages}
               </span>
-              <h3 className="font-display text-xl font-bold text-cream-50">
+              <h3 className="font-display text-xl font-bold text-bloom-700">
                 {group.range}
               </h3>
-              <p className="leading-relaxed text-cream-100/85">{group.description}</p>
+              <p className="leading-relaxed text-ink-800">{group.description}</p>
             </div>
           ))}
         </div>
