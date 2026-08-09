@@ -39,7 +39,7 @@ export default function StickyFeatureTabs() {
   const isPurple = active.color === 'bloom'
 
   return (
-    <div className="relative lg:h-[220vh]">
+    <div className="relative lg:h-[2560px]">
       {/* Marcadores invisíveis: cada um ocupa uma fatia do scroll e ativa sua aba
           correspondente quando cruza o centro da tela (só importa no desktop). */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
@@ -53,7 +53,7 @@ export default function StickyFeatureTabs() {
         ))}
       </div>
 
-      <div className="lg:sticky lg:top-24">
+      <div className="lg:sticky lg:top-[120px]">
         <div className="flex flex-wrap items-center justify-center gap-2 rounded-full bg-bloom-50 p-2 lg:mx-auto lg:w-fit">
           {values.map((value, index) => (
             <button
@@ -72,7 +72,7 @@ export default function StickyFeatureTabs() {
           ))}
         </div>
 
-        <div className="mt-8 grid items-center gap-8 lg:min-h-[420px] lg:grid-cols-2 lg:gap-14">
+        <div className="mt-8 grid items-center gap-8 lg:min-h-[560px] lg:grid-cols-2 lg:gap-14">
           <div
             className={`paper-card flex flex-col gap-4 p-8 sm:p-10 ${
               isPurple ? 'bg-bloom-50' : 'bg-sun-50'
