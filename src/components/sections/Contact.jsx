@@ -42,7 +42,6 @@ export default function Contact() {
         <SectionHeading
           eyebrow="Matrículas e contato"
           title="Vamos conversar sobre o futuro do seu filho?"
-          description="Preencha o formulário ou fale com a gente diretamente pelo WhatsApp — teremos prazer em te atender."
         />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-5">

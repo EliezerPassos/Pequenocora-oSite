@@ -26,12 +26,23 @@ export default function VideoReelCarousel({ videos, onPlay }) {
             key={video.title}
             type="button"
             data-reel
-            onClick={() => video.youtubeId && onPlay(video)}
+            onClick={() => (video.youtubeId || video.videoSrc) && onPlay(video)}
             className={`group relative aspect-[9/16] w-[62%] shrink-0 snap-start overflow-hidden rounded-[24px] shadow-soft transition-transform duration-200 hover:-translate-y-1 sm:w-[38%] lg:w-[24%] ${
-              video.youtubeId ? 'cursor-pointer' : 'cursor-default'
+              video.youtubeId || video.videoSrc ? 'cursor-pointer' : 'cursor-default'
             } ${index % 2 === 0 ? 'bg-bloom-600' : 'bg-bloom-500'}`}
           >
-            {video.youtubeId ? (
+            {video.videoSrc ? (
+              // TODO: vídeo de teste neutro — trocar por `video.videoSrc` real da família
+              // assim que a gravação/autorização estiver pronta.
+              <video
+                src={video.videoSrc}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            ) : video.youtubeId ? (
               // TODO: placeholder temporário do canal @LittleScholarsChannel — trocar pela
               // thumbnail/vídeo real assim que a Bia gravar o material próprio.
               <img
@@ -45,15 +56,19 @@ export default function VideoReelCarousel({ videos, onPlay }) {
                 <Heart className="h-10 w-10 text-cream-50/70" />
               </div>
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent" />
+            {!video.videoSrc && (
+              <>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent" />
+                <span className="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 p-4 text-left">
+                  <span className="font-display text-sm font-bold text-cream-50">{video.title}</span>
+                  {video.subtitle && (
+                    <span className="text-xs text-cream-100/80">{video.subtitle}</span>
+                  )}
+                </span>
+              </>
+            )}
             <PlayButton className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" size="h-14 w-14" />
-            <span className="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 p-4 text-left">
-              <span className="font-display text-sm font-bold text-cream-50">{video.title}</span>
-              {video.subtitle && (
-                <span className="text-xs text-cream-100/80">{video.subtitle}</span>
-              )}
-            </span>
-            {!video.youtubeId && (
+            {!video.youtubeId && !video.videoSrc && (
               <span className="absolute right-3 top-3 rounded-full bg-ink-950/70 px-2.5 py-1 font-display text-xs font-semibold text-cream-50">
                 Em breve
               </span>

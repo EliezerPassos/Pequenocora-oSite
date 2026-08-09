@@ -12,10 +12,11 @@ import { testimonials } from '../../data/content.js'
 export default function FamiliesLoveUs() {
   const [activeVideo, setActiveVideo] = useState(null)
 
+  // TODO: vídeo de teste neutro (CC0) só para visualizar o layout — trocar por
+  // videoSrc real de cada família assim que a gravação/autorização estiver pronta.
   const videos = testimonials.map((item) => ({
     title: item.name,
-    subtitle: item.relation,
-    youtubeId: item.youtubeId,
+    videoSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
   }))
 
   return (

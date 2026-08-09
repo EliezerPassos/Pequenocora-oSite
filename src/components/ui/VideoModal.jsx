@@ -13,14 +13,19 @@ export default function VideoModal({ video, onClose }) {
         className="aspect-video w-full max-w-3xl overflow-hidden rounded-3xl shadow-soft"
         onClick={(event) => event.stopPropagation()}
       >
-        {/* TODO: trocar pela URL real do vídeo (embed do YouTube) assim que publicado */}
-        <iframe
-          src={`https://www.youtube.com/embed/${video.youtubeId}`}
-          title={video.title}
-          className="h-full w-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        {video.videoSrc ? (
+          // TODO: vídeo de teste neutro — trocar por `video.videoSrc` real assim que pronto
+          <video src={video.videoSrc} controls autoPlay className="h-full w-full" />
+        ) : (
+          // TODO: trocar pela URL real do vídeo (embed do YouTube) assim que publicado
+          <iframe
+            src={`https://www.youtube.com/embed/${video.youtubeId}`}
+            title={video.title}
+            className="h-full w-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        )}
       </div>
       <button
         type="button"
