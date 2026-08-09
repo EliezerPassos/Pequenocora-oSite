@@ -5,7 +5,7 @@ import SectionHeading from '../ui/SectionHeading.jsx'
 import Button from '../ui/Button.jsx'
 import VideoCard from '../ui/VideoCard.jsx'
 import VideoModal from '../ui/VideoModal.jsx'
-import { Star, TornEdge } from '../../assets/illustrations/index.js'
+import { Star } from '../../assets/illustrations/index.js'
 import { biaPlaylist } from '../../data/content.js'
 
 export default function BiaPlaylist() {
@@ -39,8 +39,6 @@ export default function BiaPlaylist() {
       </Container>
 
       <VideoModal video={activeVideo} onClose={() => setActiveVideo(null)} />
-
-      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-cream-50" />
     </section>
   )
 }

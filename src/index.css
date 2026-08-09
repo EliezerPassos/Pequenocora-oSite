@@ -7,10 +7,11 @@
   - Preto (tom "tinta" quente, nunca 100% puro) = apoio, textos e contornos
 */
 @theme {
+  /* Satoshi (Bold/Black) nos títulos e subtítulos (h1–h4, .font-display) */
   --font-display: "Satoshi", system-ui, sans-serif;
-  --font-body: "Satoshi", system-ui, -apple-system, sans-serif;
-  /* Usar pontualmente em destaques/estatísticas, ex: font-family: var(--font-accent) */
-  --font-accent: "Satoshi", system-ui, sans-serif;
+  /* General Sans (Regular/Medium/Semibold) no texto corrido, botões e informações */
+  --font-body: "General Sans", system-ui, -apple-system, sans-serif;
+  --font-accent: "General Sans", system-ui, sans-serif;
 
   /* Amarelo — sol, alegria */
   --color-sun-50: #fffbeb;

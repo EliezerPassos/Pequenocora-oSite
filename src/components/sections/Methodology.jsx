@@ -1,6 +1,6 @@
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
-import { Sun, Star, TornEdge } from '../../assets/illustrations/index.js'
+import { Sun, Star } from '../../assets/illustrations/index.js'
 import { ageGroups, dailyRoutine } from '../../data/content.js'
 
 export default function Methodology() {
@@ -51,8 +51,6 @@ export default function Methodology() {
           </ol>
         </div>
       </Container>
-
-      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-bloom-50" />
     </section>
   )
 }

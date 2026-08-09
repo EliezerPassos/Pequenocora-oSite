@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Container from '../ui/Container.jsx'
-import { Heart, TornEdge } from '../../assets/illustrations/index.js'
+import { Heart } from '../../assets/illustrations/index.js'
 import { navLinks, siteInfo } from '../../data/content.js'
 
 export default function Footer() {
@@ -8,7 +8,6 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-ink-950 pt-16 text-cream-100">
-      <TornEdge flip className="absolute -top-px left-0 h-14 w-full text-ink-950" />
       <Container className="grid gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2.5 font-display text-lg font-bold text-cream-50">
