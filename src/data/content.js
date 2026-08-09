@@ -36,28 +36,30 @@ export const navLinks = [
   { label: 'Contato', href: '#contato' },
 ]
 
-// TODO: playlist real "Momento com a Bia" — substituir youtubeId por cada vídeo publicado
-// no canal do YouTube da creche (ID é o trecho após "v=" na URL do vídeo).
+// TODO: playlist real "Momento com a Bia" — os vídeos abaixo são placeholders temporários
+// do canal @LittleScholarsChannel (youtube.com/@LittleScholarsChannel), usados só até a
+// Bia gravar o material próprio. Substituir youtubeId por cada vídeo publicado no canal
+// da creche assim que estiver pronto (ID é o trecho após "v=" na URL do vídeo).
 export const biaPlaylist = [
   {
     title: 'Um dia na Pequeno Coração',
     description: 'Do acolhimento da manhã até a saída — como é a rotina completa dos pequenos.',
-    youtubeId: '',
+    youtubeId: 'YRuaP2HWNoA',
   },
   {
     title: 'Hora da leitura',
     description: 'A Bia mostra o cantinho da leitura e como estimulamos o gosto pelos livros.',
-    youtubeId: '',
+    youtubeId: 'zFL2dqpeY2w',
   },
   {
     title: 'Brincando ao ar livre',
     description: 'Um passeio pelo pátio e pelas brincadeiras que fazem parte do dia a dia.',
-    youtubeId: '',
+    youtubeId: 'kwq8U2H20GA',
   },
   {
     title: 'Alimentação e cuidados',
     description: 'Como cuidamos da alimentação e da higiene de cada criança, fase por fase.',
-    youtubeId: '',
+    youtubeId: 'HgyQrk_6brM',
   },
 ]
 

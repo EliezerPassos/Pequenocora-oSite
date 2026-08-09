@@ -45,15 +45,24 @@ export default function BiaPlaylist() {
               }`}
             >
               <div
-                className={`relative flex aspect-video items-center justify-center ${
+                className={`relative flex aspect-video items-center justify-center overflow-hidden ${
                   index % 2 === 0 ? 'bg-bloom-600' : 'bg-bloom-500'
                 }`}
               >
-                {/*
-                  TODO: quando o vídeo estiver publicado no YouTube, substituir este bloco
-                  pela thumbnail real (ex: `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`)
-                */}
-                <Heart className="h-10 w-10 text-cream-50/70" />
+                {video.youtubeId ? (
+                  // TODO: placeholder temporário do canal @LittleScholarsChannel — trocar
+                  // pela thumbnail real (`https://img.youtube.com/vi/SEU_ID/hqdefault.jpg`)
+                  // assim que a Bia gravar o vídeo próprio.
+                  <img
+                    src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                    alt=""
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover opacity-80"
+                  />
+                ) : (
+                  <Heart className="h-10 w-10 text-cream-50/70" />
+                )}
+                <div className="absolute inset-0 bg-ink-950/25" />
                 <PlayButton className="absolute" />
                 {!video.youtubeId && (
                   <span className="absolute bottom-2 right-2 rounded-full bg-ink-950/70 px-2.5 py-1 font-display text-xs font-semibold text-cream-50">
