@@ -148,29 +148,36 @@ export const galleryItems = [
   { label: 'Área de brinquedos', image: '/images/estrutura/6.svg' },
 ]
 
+// TODO: vídeos-depoimento reais das famílias — os youtubeId abaixo são placeholders
+// temporários do canal @LittleScholarsChannel, usados só até gravarmos com nossas
+// próprias famílias (com autorização). Substituir assim que tiver o material.
 export const testimonials = [
   {
     name: 'Mariana S.',
     relation: 'mãe da Laura, 3 anos',
     quote:
       'A adaptação da minha filha foi tranquila graças ao carinho da equipe. Hoje ela adora ir para a escolinha!',
+    youtubeId: 'MBA_B2mLCB8',
   },
   {
     name: 'Rodrigo A.',
     relation: 'pai do Bernardo, 2 anos',
     quote:
       'Sinto segurança em deixar meu filho no Pequeno Coração. A comunicação com os professores é excelente.',
+    youtubeId: 'iG8OgPGL-_s',
   },
   {
     name: 'Camila T.',
     relation: 'mãe do Théo, 4 anos',
     quote:
       'A proposta pedagógica é linda, muito voltada ao brincar e ao respeito ao tempo de cada criança.',
+    youtubeId: 'yd3r1qWUDv8',
   },
   {
     name: 'Fernanda M.',
     relation: 'mãe da Alice, 1 ano',
     quote:
       'Ambiente limpo, acolhedor e uma equipe muito atenciosa. Recomendo de olhos fechados!',
+    youtubeId: 'yoV-7vEFZ-s',
   },
 ]

@@ -45,10 +45,13 @@ export default function VideoReelCarousel({ videos, onPlay }) {
                 <Heart className="h-10 w-10 text-cream-50/70" />
               </div>
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/15 to-transparent" />
             <PlayButton className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" size="h-14 w-14" />
-            <span className="absolute inset-x-0 bottom-0 p-4 text-left font-display text-sm font-bold text-cream-50">
-              {video.title}
+            <span className="absolute inset-x-0 bottom-0 flex flex-col gap-0.5 p-4 text-left">
+              <span className="font-display text-sm font-bold text-cream-50">{video.title}</span>
+              {video.subtitle && (
+                <span className="text-xs text-cream-100/80">{video.subtitle}</span>
+              )}
             </span>
             {!video.youtubeId && (
               <span className="absolute right-3 top-3 rounded-full bg-ink-950/70 px-2.5 py-1 font-display text-xs font-semibold text-cream-50">

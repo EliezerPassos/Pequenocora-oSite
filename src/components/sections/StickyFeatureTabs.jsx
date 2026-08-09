@@ -6,50 +6,32 @@ const icons = { Heart, Blocks, Sun, Star }
 
 // Bloco de "abas fixas por scroll" — inspirado no padrão de sticky-scroll-tabs usado em
 // sites como o da Primrose Schools (mecânica recriada; texto e imagens são nossos).
+// Usa IntersectionObserver (em vez de listener de scroll) para não conflitar com o
+// scroll suave (Lenis) do site nem forçar recálculos de layout a cada frame.
 export default function StickyFeatureTabs() {
-  const wrapperRef = useRef(null)
+  const markerRefs = useRef([])
   const [activeIndex, setActiveIndex] = useState(0)
-  const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
-    const query = window.matchMedia('(min-width: 1024px)')
-    const update = () => setIsDesktop(query.matches)
-    update()
-    query.addEventListener('change', update)
-    return () => query.removeEventListener('change', update)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.dataset.index)
+            setActiveIndex(index)
+          }
+        })
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+    )
+
+    markerRefs.current.forEach((marker) => marker && observer.observe(marker))
+    return () => observer.disconnect()
   }, [])
 
-  useEffect(() => {
-    if (!isDesktop) return
-
-    const handleScroll = () => {
-      const wrapper = wrapperRef.current
-      if (!wrapper) return
-      const rect = wrapper.getBoundingClientRect()
-      const scrollable = rect.height - window.innerHeight
-      if (scrollable <= 0) return
-      const progress = Math.min(Math.max(-rect.top / scrollable, 0), 0.999)
-      const index = Math.floor(progress * values.length)
-      setActiveIndex(Math.min(Math.max(index, 0), values.length - 1))
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [isDesktop])
-
   const handleTabClick = (index) => {
-    const wrapper = wrapperRef.current
-    if (isDesktop && wrapper) {
-      // Rola até o trecho do scroll correspondente, mantendo a aba clicada sincronizada
-      // com o efeito de scroll (em vez de só trocar o estado, que o scroll sobrescreveria).
-      const rect = wrapper.getBoundingClientRect()
-      const scrollable = rect.height - window.innerHeight
-      const targetProgress = (index + 0.5) / values.length
-      window.scrollTo({ top: window.scrollY + rect.top + targetProgress * scrollable, behavior: 'smooth' })
-    } else {
-      setActiveIndex(index)
-    }
+    setActiveIndex(index)
+    markerRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
   const active = values[activeIndex]
@@ -57,10 +39,20 @@ export default function StickyFeatureTabs() {
   const isPurple = active.color === 'bloom'
 
   return (
-    <div
-      ref={wrapperRef}
-      className="relative lg:h-[220vh]"
-    >
+    <div className="relative lg:h-[220vh]">
+      {/* Marcadores invisíveis: cada um ocupa uma fatia do scroll e ativa sua aba
+          correspondente quando cruza o centro da tela (só importa no desktop). */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
+        {values.map((value, index) => (
+          <div
+            key={value.tab}
+            ref={(el) => (markerRefs.current[index] = el)}
+            data-index={index}
+            style={{ height: `${100 / values.length}%` }}
+          />
+        ))}
+      </div>
+
       <div className="lg:sticky lg:top-24">
         <div className="flex flex-wrap items-center justify-center gap-2 rounded-full bg-bloom-50 p-2 lg:mx-auto lg:w-fit">
           {values.map((value, index) => (
@@ -80,7 +72,7 @@ export default function StickyFeatureTabs() {
           ))}
         </div>
 
-        <div className="mt-8 grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
+        <div className="mt-8 grid items-center gap-8 lg:min-h-[420px] lg:grid-cols-2 lg:gap-14">
           <div
             className={`paper-card flex flex-col gap-4 p-8 sm:p-10 ${
               isPurple ? 'bg-bloom-50' : 'bg-sun-50'
