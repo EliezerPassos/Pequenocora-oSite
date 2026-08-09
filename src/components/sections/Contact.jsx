@@ -3,12 +3,14 @@ import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
 import Button from '../ui/Button.jsx'
 import WhatsAppIcon from '../ui/WhatsAppIcon.jsx'
+import useWhatsAppLink from '../../hooks/useWhatsAppLink.js'
 import { siteInfo } from '../../data/content.js'
 
 const initialForm = { name: '', phone: '', email: '', message: '' }
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
+  const scheduleVisitLink = useWhatsAppLink('Gostaria de agendar uma visita, vim pelo Site')
   const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (event) => {
@@ -137,13 +139,13 @@ export default function Contact() {
               </p>
             </div>
             <Button
-              href={`https://wa.me/${siteInfo.whatsappNumber}`}
+              href={scheduleVisitLink}
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
             >
               <WhatsAppIcon />
-              Chamar no WhatsApp
+              Agende uma visita
             </Button>
           </div>
         </div>
