@@ -32,7 +32,7 @@ export const navLinks = [
   { label: 'Momento com a Bia', href: '#momento-com-a-bia' },
   { label: 'Blog', href: '/blog' },
   { label: 'Estrutura', href: '#estrutura' },
-  { label: 'Depoimentos', href: '#depoimentos' },
+  { label: 'Famílias', href: '#familias-recomendam' },
   { label: 'Localização', href: '#localizacao' },
   { label: 'Contato', href: '#contato' },
 ]

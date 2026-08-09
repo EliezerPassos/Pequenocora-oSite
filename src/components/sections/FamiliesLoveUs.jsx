@@ -29,12 +29,17 @@ export default function FamiliesLoveUs() {
 
   return (
     <section id="familias-recomendam" className="relative overflow-hidden bg-bloom-700 py-20 sm:py-28">
-      <TornEdge className="absolute -top-px left-0 h-16 w-full rotate-180 text-bloom-50" />
+      <TornEdge className="absolute -top-px left-0 h-16 w-full rotate-180 text-cream-50" />
       <Container>
         <SectionHeading
           light
           eyebrow="Famílias Pequeno Coração"
-          title="Porque as Famílias Amam a Pequeno Coração"
+          title={
+            <>
+              <span className="font-normal">Porque as Famílias Amam a </span>
+              <span className="font-bold">Pequeno Coração</span>
+            </>
+          }
           description="Em breve, vídeos reais das nossas famílias contando como é fazer parte da nossa comunidade."
         />
 
