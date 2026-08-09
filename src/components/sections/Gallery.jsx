@@ -23,7 +23,6 @@ export default function Gallery() {
           description="Salas amplas, seguras e coloridas, pensadas para estimular a curiosidade e o bem-estar dos pequenos em cada fase."
         />
 
-        {/* TODO: substituir as imagens em public/images/estrutura por fotos reais da creche */}
         <div
           ref={trackRef}
           className="mt-14 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"

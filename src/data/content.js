@@ -152,12 +152,13 @@ export const dailyRoutine = [
 ]
 
 export const galleryItems = [
-  { label: 'Sala do Maternal', image: '/images/estrutura/1.svg' },
-  { label: 'Pátio externo', image: '/images/estrutura/2.svg' },
-  { label: 'Refeitório', image: '/images/estrutura/3.svg' },
-  { label: 'Sala do Berçário', image: '/images/estrutura/4.svg' },
-  { label: 'Cantinho da leitura', image: '/images/estrutura/5.svg' },
-  { label: 'Área de brinquedos', image: '/images/estrutura/6.svg' },
+  { label: 'Área externa e playground', image: '/Espaco/pexels-rafael-rodrigues-173187950-38561388.jpg' },
+  { label: 'Pátio de brincadeiras', image: '/Espaco/pexels-bertellifotografia-19230078.jpg' },
+  { label: 'Salas amplas e claras', image: '/Espaco/pexels-artempodrez-8088086.jpg' },
+  { label: 'Sala colorida e lúdica', image: '/Espaco/istockphoto-1151392292-612x612.jpg' },
+  { label: 'Cantinho do faz de conta', image: '/Espaco/pexels-kseniachernaya-8535620.jpg' },
+  { label: 'Cantinho das artes', image: '/Espaco/pexels-nataliaolivera-30594012.jpg' },
+  { label: 'Cantinho da música', image: '/Espaco/pexels-kseniachernaya-8535632.jpg' },
 ]
 
 // TODO: vídeos-depoimento reais das famílias — os youtubeId abaixo são placeholders
