@@ -23,29 +23,30 @@ export default function VideoCard({ video, index = 0, onPlay }) {
       }`}
     >
       <div
-        className={`relative flex aspect-video items-center justify-center overflow-hidden ${
-          index % 2 === 0 ? 'bg-bloom-600' : 'bg-bloom-500'
-        }`}
+        className={`relative w-full overflow-hidden ${index % 2 === 0 ? 'bg-bloom-600' : 'bg-bloom-500'}`}
+        style={{ paddingTop: '56.25%' }}
       >
-        {video.youtubeId ? (
-          // TODO: placeholder temporário do canal @LittleScholarsChannel — trocar
-          // pela thumbnail real (`https://img.youtube.com/vi/SEU_ID/hqdefault.jpg`)
-          // assim que a Bia gravar o vídeo próprio.
-          <img
-            src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        ) : (
-          <Heart className="h-10 w-10 text-cream-50/70" />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 via-ink-950/5 to-transparent" />
-        <PlayButton className="absolute" />
-        {!video.youtubeId && (
-          <span className="absolute bottom-2 right-2 rounded-full bg-ink-950/70 px-2.5 py-1 font-display text-xs font-semibold text-cream-50">
-            Em breve
-          </span>
-        )}
+        <div className="absolute inset-0 flex items-center justify-center">
+          {video.youtubeId ? (
+            // TODO: placeholder temporário do canal @LittleScholarsChannel — trocar
+            // pela thumbnail real (`https://img.youtube.com/vi/SEU_ID/hqdefault.jpg`)
+            // assim que a Bia gravar o vídeo próprio.
+            <img
+              src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          ) : (
+            <Heart className="h-10 w-10 text-cream-50/70" />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 via-ink-950/5 to-transparent" />
+          <PlayButton className="absolute" />
+          {!video.youtubeId && (
+            <span className="absolute bottom-2 right-2 rounded-full bg-ink-950/70 px-2.5 py-1 font-display text-xs font-semibold text-cream-50">
+              Em breve
+            </span>
+          )}
+        </div>
       </div>
       <div className="flex flex-col gap-1.5 p-5">
         <h3 className="font-display text-base font-bold text-bloom-700">{video.title}</h3>
