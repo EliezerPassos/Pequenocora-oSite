@@ -5,6 +5,7 @@ import { navLinks, siteInfo } from '../../data/content.js'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [logoScale, setLogoScale] = useState(1)
   const menuRef = useRef(null)
 
   // Fecha o menu ao clicar fora dele
@@ -17,11 +18,46 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isOpen])
 
+  // No mobile, o ícone começa bem maior no topo da página e encolhe até o
+  // tamanho normal nos primeiros ~100px de scroll — só nessa faixa de tela.
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReducedMotion) return
+
+    let frameId
+    const handleScroll = () => {
+      if (window.innerWidth >= 640) {
+        setLogoScale(1)
+        return
+      }
+      const progress = Math.min(window.scrollY / 100, 1)
+      setLogoScale(1.8 - progress * 0.8)
+    }
+    const onScroll = () => {
+      cancelAnimationFrame(frameId)
+      frameId = requestAnimationFrame(handleScroll)
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', handleScroll)
+    return () => {
+      cancelAnimationFrame(frameId)
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
+  }, [])
+
   return (
     <header className="sticky top-0 z-50 border-b border-bloom-100 bg-cream-50/95 backdrop-blur-sm">
       <Container className="flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold text-bloom-700">
-          <img src="/logocoracao.jpg" alt="" className="h-11 w-11 shrink-0 rounded-full object-cover" />
+          <img
+            src="/logocoracao.jpg"
+            alt=""
+            className="h-11 w-11 shrink-0 rounded-full object-cover transition-transform duration-150 ease-out"
+            style={{ transform: `scale(${logoScale})`, transformOrigin: 'left center' }}
+          />
           <span className="leading-tight">
             {siteInfo.name}
           </span>

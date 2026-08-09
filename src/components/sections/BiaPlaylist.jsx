@@ -33,7 +33,7 @@ export default function BiaPlaylist() {
 
         <div className="mt-10 flex justify-center">
           <Button as={Link} to="/blog" variant="outline">
-            Ver blog completo da Bia
+            Ver Outros Vídeos do Momento com a Bia
           </Button>
         </div>
       </Container>

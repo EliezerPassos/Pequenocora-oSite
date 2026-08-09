@@ -21,11 +21,11 @@ export default function StickyFeatureTabs() {
         return (
           <div
             key={value.tab}
-            className="sticky flex h-dvh items-center justify-center py-3 sm:py-4"
+            className="sticky flex h-dvh items-start justify-center pb-3 pt-[88px] sm:pb-4 sm:pt-[104px]"
             style={{ top: `${72 + index * 110}px`, zIndex: index + 1 }}
           >
             <article
-              className={`flex h-[78dvh] w-full max-w-4xl flex-col overflow-hidden rounded-[28px] shadow-soft sm:h-[82dvh] sm:rounded-[32px] lg:h-[85dvh] ${
+              className={`flex h-[62dvh] w-full max-w-4xl flex-col overflow-hidden rounded-[28px] shadow-soft sm:h-[66dvh] sm:rounded-[32px] lg:h-[70dvh] ${
                 isPurple ? 'bg-bloom-50' : 'bg-sun-50'
               }`}
             >
@@ -63,7 +63,7 @@ export default function StickyFeatureTabs() {
                 </a>
               </div>
 
-              <div className="relative mt-auto h-[30%] shrink-0 sm:h-[32%] lg:h-[34%]">
+              <div className="relative mt-5 h-[38%] shrink-0 sm:mt-6 sm:h-[40%] lg:mt-8 lg:h-[42%]">
                 <img
                   src={value.photo}
                   alt={value.title}
