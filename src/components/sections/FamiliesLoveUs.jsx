@@ -24,7 +24,7 @@ export default function FamiliesLoveUs() {
         : index === 1
         ? {
             title: item.name,
-            videoSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+            videoSrc: 'https://settings.primroseschools.com/wp-content/uploads/2026/05/PRIM_PLP_PROMO_Jett_30-_9x16_FINAL_050426-1.mp4',
           }
         : {
             title: item.name,
