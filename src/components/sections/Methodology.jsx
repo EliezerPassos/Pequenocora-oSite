@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
 import { Sun, Star } from '../../assets/illustrations/index.js'
@@ -31,6 +32,15 @@ export default function Methodology() {
                 {group.range}
               </h3>
               <p className="leading-relaxed text-cream-100/85">{group.description}</p>
+              <Link
+                to={`/metodologia#${group.slug}`}
+                className="mt-1 inline-flex w-fit items-center gap-1.5 font-display text-sm font-bold text-sun-300 hover:text-sun-200"
+              >
+                {group.ctaLabel}
+                <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </Link>
             </div>
           ))}
         </div>

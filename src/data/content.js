@@ -115,28 +115,116 @@ export const values = [
 
 export const ageGroups = [
   {
+    slug: 'bercario',
+    icon: 'Heart',
     range: 'Berçário I e II',
     ages: '4 meses a 1 ano e 11 meses',
     description:
       'Cuidados essenciais, estímulo sensorial e rotina de sono e alimentação respeitando o ritmo de cada bebê.',
+    ctaLabel: 'Conheça a metodologia do Berçário',
+    longDescription:
+      'No Berçário, cada bebê tem um ritmo — e é esse ritmo que guia a rotina, não o contrário. O vínculo afetivo com a equipe é a base de tudo: é ele que dá segurança para o bebê explorar, descobrir texturas, sons e movimentos novos a cada semana.',
+    pillars: [
+      {
+        title: 'Vínculo e acolhimento individual',
+        description:
+          'Atenção próxima e constante de referências afetivas fixas, com rotina de sono e alimentação respeitando o tempo de cada bebê.',
+      },
+      {
+        title: 'Estimulação sensorial',
+        description:
+          'Texturas, sons, cores e materiais pensados para bebês, estimulando os primeiros sentidos e descobertas.',
+      },
+      {
+        title: 'Desenvolvimento motor',
+        description:
+          'Espaço seguro e livre para engatinhar, sentar, ficar de pé e dar os primeiros passos no tempo de cada um.',
+      },
+    ],
   },
   {
+    slug: 'maternal',
+    icon: 'Blocks',
     range: 'Maternal I e II',
     ages: '2 a 3 anos e 11 meses',
     description:
       'Desenvolvimento da autonomia, coordenação motora, linguagem e primeiras experiências em grupo.',
+    ctaLabel: 'Conheça a metodologia do Maternal',
+    longDescription:
+      'No Maternal, as crianças começam a fazer coisas "sozinhas" — comer, vestir-se, guardar os brinquedos — e cada pequena conquista de autonomia é celebrada. É também a fase das primeiras amizades e das primeiras palavras em frases inteiras.',
+    pillars: [
+      {
+        title: 'Autonomia guiada',
+        description:
+          'Pequenas tarefas do dia a dia, como vestir-se, comer sozinho e guardar os próprios brinquedos, incentivadas com paciência.',
+      },
+      {
+        title: 'Linguagem e comunicação',
+        description:
+          'Rodas de conversa, histórias e brincadeiras que ampliam o vocabulário e a expressão oral.',
+      },
+      {
+        title: 'Socialização',
+        description:
+          'Brincadeiras em grupo, aprender a compartilhar e mediação afetiva dos primeiros pequenos conflitos.',
+      },
+    ],
   },
   {
+    slug: 'pre',
+    icon: 'Sun',
     range: 'Pré I e II',
     ages: '4 a 5 anos e 11 meses',
     description:
       'Preparação para a alfabetização, raciocínio lógico, socialização e projetos pedagógicos temáticos.',
+    ctaLabel: 'Conheça a metodologia do Pré',
+    longDescription:
+      'No Pré, a curiosidade natural das crianças vira combustível pra aprender a ler, escrever e pensar de forma lógica — sempre através do brincar. Os projetos temáticos nascem dos interesses da turma e viram descobertas coletivas.',
+    pillars: [
+      {
+        title: 'Alfabetização lúdica',
+        description:
+          'Consciência fonológica, contato com letras e números por meio de jogos, músicas e brincadeiras.',
+      },
+      {
+        title: 'Raciocínio e lógica',
+        description:
+          'Jogos, quebra-cabeças e desafios que estimulam o pensamento lógico-matemático desde cedo.',
+      },
+      {
+        title: 'Projetos temáticos',
+        description:
+          'Investigação de temas do interesse da turma, culminando em produções coletivas e apresentações.',
+      },
+    ],
   },
   {
+    slug: 'contraturno',
+    icon: 'Star',
     range: 'Contraturno',
     ages: '6 a 14 anos',
     description:
       'Apoio nas tarefas escolares, atividades recreativas e esportivas para quem já está na escola regular.',
+    ctaLabel: 'Conheça a metodologia do Contraturno',
+    longDescription:
+      'No Contraturno, quem já está na escola regular encontra um espaço pra terminar as tarefas com tranquilidade, brincar, praticar esportes e conviver com crianças de outras idades — equilibrando estudo, lazer e amizades.',
+    pillars: [
+      {
+        title: 'Apoio pedagógico',
+        description:
+          'Acompanhamento individualizado das tarefas escolares, com incentivo à organização e ao estudo.',
+      },
+      {
+        title: 'Atividades recreativas e esportivas',
+        description:
+          'Jogos, esportes e brincadeiras que equilibram o tempo de estudo com lazer e movimento.',
+      },
+      {
+        title: 'Convívio e autonomia',
+        description:
+          'Responsabilidade, organização e amizades construídas no convívio entre diferentes idades.',
+      },
+    ],
   },
 ]
 
