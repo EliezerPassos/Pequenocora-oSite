@@ -35,12 +35,12 @@ export default function VideoCard({ video, index = 0, onPlay }) {
             src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
             alt=""
             loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover opacity-80"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         ) : (
           <Heart className="h-10 w-10 text-cream-50/70" />
         )}
-        <div className="absolute inset-0 bg-ink-950/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 via-ink-950/5 to-transparent" />
         <PlayButton className="absolute" />
         {!video.youtubeId && (
           <span className="absolute bottom-2 right-2 rounded-full bg-ink-950/70 px-2.5 py-1 font-display text-xs font-semibold text-cream-50">

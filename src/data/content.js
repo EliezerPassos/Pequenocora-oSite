@@ -22,6 +22,8 @@ export const siteInfo = {
   social: {
     instagram: 'https://instagram.com/', // TODO
     facebook: 'https://facebook.com/', // TODO
+    x: 'https://x.com/', // TODO
+    linkedin: 'https://linkedin.com/', // TODO
   },
 }
 

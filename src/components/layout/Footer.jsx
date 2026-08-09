@@ -43,6 +43,28 @@ export default function Footer() {
                 <path d="M13.5 21.9v-8.1h2.7l.4-3.1h-3.1V8.7c0-.9.25-1.5 1.55-1.5H16.7V4.4c-.3-.04-1.28-.13-2.4-.13-2.4 0-4 1.46-4 4.15v2.32H7.6v3.1h2.7v8.1h3.2Z" />
               </svg>
             </a>
+            <a
+              href={siteInfo.social.x}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter) do CEI Pequeno Coração"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-sun-400 hover:text-ink-950"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M13.8 10.6 20.6 2.8h-1.6l-5.9 6.8-4.7-6.8H2.5l7.1 10.3-7.1 8.2h1.6l6.2-7.2 5 7.2h5.9l-7.4-10.7Zm-2.2 2.5-.7-1L4.9 4h2.5l4.6 6.6.7 1 6 8.6h-2.5l-4.9-7Z" />
+              </svg>
+            </a>
+            <a
+              href={siteInfo.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn do CEI Pequeno Coração"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-sun-400 hover:text-ink-950"
+            >
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3.2a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92ZM20.44 20h-3.37v-5.9c0-1.41-.03-3.22-1.96-3.22-1.97 0-2.27 1.54-2.27 3.12V20H9.47V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.2-1.77 3.42 0 4.05 2.25 4.05 5.18V20Z" />
+              </svg>
+            </a>
           </div>
         </div>
 
