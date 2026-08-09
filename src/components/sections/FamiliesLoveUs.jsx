@@ -27,7 +27,11 @@ export default function FamiliesLoveUs() {
             quote: item.quote,
           }
     ),
-    { title: 'Ver mais histórias', cta: true, ctaHref: '/blog' },
+    {
+      title: 'Ver mais histórias',
+      cta: true,
+      ctaHref: 'https://www.youtube.com/@CEIPequenocora%C3%A7%C3%A3o',
+    },
   ]
 
   return (

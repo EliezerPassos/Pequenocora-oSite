@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-
 export default function CtaReelCard({ label, to }) {
   return (
-    <Link
-      to={to}
+    <a
+      href={to}
+      target="_blank"
+      rel="noopener noreferrer"
       data-reel
       className="group relative flex aspect-[9/16] w-[62%] shrink-0 snap-start flex-col justify-start overflow-hidden rounded-[24px] bg-bloom-600 px-6 pb-8 pt-6 shadow-soft transition-transform duration-200 hover:-translate-y-1 sm:w-[38%] lg:w-[24%] lg:rounded-[32px] lg:px-8 lg:pb-10 lg:pt-8"
     >
@@ -23,6 +23,6 @@ export default function CtaReelCard({ label, to }) {
           <path d="M16.0756 9.06074C16.5084 9.09852 16.8503 9.45875 16.8566 9.9025C16.8633 10.3758 16.4854 10.7652 16.0121 10.7719L4.01197 10.9404C3.53873 10.947 3.14933 10.5691 3.14259 10.0958C3.13592 9.62251 3.51515 9.23313 3.98849 9.22647L15.9879 9.05729L16.0756 9.06074Z" fill="currentColor" />
         </svg>
       </div>
-    </Link>
+    </a>
   )
 }
