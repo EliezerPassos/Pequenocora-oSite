@@ -17,9 +17,6 @@ dist-ssr
 public/*.html
 public/*_files/
 
-# Imagens de referência ainda sem confirmação de origem/licença (ver conversa)
-public/Cards/
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
