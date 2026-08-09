@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 import WhatsAppIcon from '../ui/WhatsAppIcon.jsx'
@@ -21,23 +22,32 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-bloom-100 bg-cream-50/95 backdrop-blur-sm">
       <Container className="flex h-20 items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2.5 font-display text-lg font-bold text-bloom-700">
+        <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold text-bloom-700">
           <img src="/logocoracao.jpg" alt="" className="h-11 w-11 shrink-0 rounded-full object-cover" />
           <span className="leading-tight">
             {siteInfo.name}
           </span>
-        </a>
+        </Link>
 
         <nav aria-label="Navegação principal" className="hidden lg:block">
           <ul className="flex items-center gap-7">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="font-medium text-ink-800 transition-colors hover:text-bloom-600"
-                >
-                  {link.label}
-                </a>
+                {link.href.startsWith('#') ? (
+                  <a
+                    href={`/${link.href}`}
+                    className="font-medium text-ink-800 transition-colors hover:text-bloom-600"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.href}
+                    className="font-medium text-ink-800 transition-colors hover:text-bloom-600"
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -85,13 +95,23 @@ export default function Header() {
           <ul className="flex flex-col gap-1 px-5 py-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block rounded-xl px-3 py-3 font-medium text-ink-800 hover:bg-bloom-50 hover:text-bloom-700"
-                >
-                  {link.label}
-                </a>
+                {link.href.startsWith('#') ? (
+                  <a
+                    href={`/${link.href}`}
+                    onClick={() => setIsOpen(false)}
+                    className="block rounded-xl px-3 py-3 font-medium text-ink-800 hover:bg-bloom-50 hover:text-bloom-700"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block rounded-xl px-3 py-3 font-medium text-ink-800 hover:bg-bloom-50 hover:text-bloom-700"
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
             <li className="mt-2">

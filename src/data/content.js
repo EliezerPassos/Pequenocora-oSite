@@ -30,6 +30,7 @@ export const navLinks = [
   { label: 'Sobre', href: '#sobre' },
   { label: 'Metodologia', href: '#metodologia' },
   { label: 'Momento com a Bia', href: '#momento-com-a-bia' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Estrutura', href: '#estrutura' },
   { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Localização', href: '#localizacao' },

@@ -1,31 +1,36 @@
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
 import WhatsAppFloatButton from './components/layout/WhatsAppFloatButton.jsx'
-import Hero from './components/sections/Hero.jsx'
-import About from './components/sections/About.jsx'
-import Methodology from './components/sections/Methodology.jsx'
-import BiaPlaylist from './components/sections/BiaPlaylist.jsx'
-import Gallery from './components/sections/Gallery.jsx'
-import Testimonials from './components/sections/Testimonials.jsx'
-import Location from './components/sections/Location.jsx'
-import Contact from './components/sections/Contact.jsx'
+import Home from './pages/Home.jsx'
+import Blog from './pages/Blog.jsx'
+import BlogPost from './pages/BlogPost.jsx'
 import useSmoothScroll from './hooks/useSmoothScroll.js'
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) window.scrollTo(0, 0)
+  }, [pathname, hash])
+
+  return null
+}
 
 function App() {
   useSmoothScroll()
 
   return (
     <>
+      <ScrollToTop />
       <Header />
       <main>
-        <Hero />
-        <About />
-        <Methodology />
-        <BiaPlaylist />
-        <Gallery />
-        <Testimonials />
-        <Location />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+        </Routes>
       </main>
       <Footer />
       <WhatsAppFloatButton />

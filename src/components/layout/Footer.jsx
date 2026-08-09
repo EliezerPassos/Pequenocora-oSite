@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Container from '../ui/Container.jsx'
 import { Heart, TornEdge } from '../../assets/illustrations/index.js'
 import { navLinks, siteInfo } from '../../data/content.js'
@@ -50,9 +51,15 @@ export default function Footer() {
           <ul className="mt-4 flex flex-col gap-2.5 text-sm">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="text-cream-100/70 transition-colors hover:text-sun-300">
-                  {link.label}
-                </a>
+                {link.href.startsWith('#') ? (
+                  <a href={`/${link.href}`} className="text-cream-100/70 transition-colors hover:text-sun-300">
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link to={link.href} className="text-cream-100/70 transition-colors hover:text-sun-300">
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
