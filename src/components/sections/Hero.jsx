@@ -38,21 +38,9 @@ export default function Hero() {
               </h1>
             </div>
 
-            <div className="flex w-full flex-col gap-3">
-              <Button
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="primary"
-                className="w-full justify-center"
-              >
-                <WhatsAppIcon />
-                Agende uma visita
-              </Button>
-              <Button as="a" href="#rotina" variant="secondary" className="w-full justify-center">
-                Veja um dia na Pequeno Coração
-              </Button>
-            </div>
+            <Button as="a" href="#rotina" variant="secondary" className="w-full justify-center">
+              Veja um dia na Pequeno Coração
+            </Button>
           </div>
         </div>
       </Container>
