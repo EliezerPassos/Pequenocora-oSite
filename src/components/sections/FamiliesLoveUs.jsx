@@ -14,10 +14,18 @@ export default function FamiliesLoveUs() {
 
   // TODO: vídeo de teste neutro (CC0) só para visualizar o layout — trocar por
   // videoSrc real de cada família assim que a gravação/autorização estiver pronta.
-  const videos = testimonials.map((item) => ({
-    title: item.name,
-    videoSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-  }))
+  const videos = testimonials.map((item, index) =>
+    index < 2
+      ? {
+          title: item.name,
+          videoSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+        }
+      : {
+          title: item.name,
+          subtitle: item.relation,
+          quote: item.quote,
+        }
+  )
 
   return (
     <section id="familias-recomendam" className="relative overflow-hidden bg-bloom-700 py-20 sm:py-28">
@@ -26,7 +34,7 @@ export default function FamiliesLoveUs() {
         <SectionHeading
           light
           eyebrow="Famílias Pequeno Coração"
-          title="Famílias amam o Pequeno Coração"
+          title="Porque as Famílias Amam a Pequeno Coração"
           description="Em breve, vídeos reais das nossas famílias contando como é fazer parte da nossa comunidade."
         />
 
