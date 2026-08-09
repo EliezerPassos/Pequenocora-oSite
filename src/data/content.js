@@ -29,10 +29,36 @@ export const navLinks = [
   { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Metodologia', href: '#metodologia' },
+  { label: 'Momento com a Bia', href: '#momento-com-a-bia' },
   { label: 'Estrutura', href: '#estrutura' },
   { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Localização', href: '#localizacao' },
   { label: 'Contato', href: '#contato' },
+]
+
+// TODO: playlist real "Momento com a Bia" — substituir youtubeId por cada vídeo publicado
+// no canal do YouTube da creche (ID é o trecho após "v=" na URL do vídeo).
+export const biaPlaylist = [
+  {
+    title: 'Um dia na Pequeno Coração',
+    description: 'Do acolhimento da manhã até a saída — como é a rotina completa dos pequenos.',
+    youtubeId: '',
+  },
+  {
+    title: 'Hora da leitura',
+    description: 'A Bia mostra o cantinho da leitura e como estimulamos o gosto pelos livros.',
+    youtubeId: '',
+  },
+  {
+    title: 'Brincando ao ar livre',
+    description: 'Um passeio pelo pátio e pelas brincadeiras que fazem parte do dia a dia.',
+    youtubeId: '',
+  },
+  {
+    title: 'Alimentação e cuidados',
+    description: 'Como cuidamos da alimentação e da higiene de cada criança, fase por fase.',
+    youtubeId: '',
+  },
 ]
 
 export const values = [

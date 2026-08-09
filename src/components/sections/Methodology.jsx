@@ -35,7 +35,7 @@ export default function Methodology() {
           ))}
         </div>
 
-        <div className="paper-card mt-16 p-7 sm:p-10">
+        <div id="rotina" className="paper-card mt-16 scroll-mt-24 p-7 sm:p-10">
           <h3 className="font-display text-2xl font-bold text-bloom-700">
             Rotina diária
           </h3>
@@ -52,7 +52,7 @@ export default function Methodology() {
         </div>
       </Container>
 
-      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-cream-50" />
+      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-bloom-50" />
     </section>
   )
 }

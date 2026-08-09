@@ -5,7 +5,9 @@ import { Sun, Heart, Cloud, Star, Blob, TornEdge } from '../../assets/illustrati
 import useWhatsAppLink from '../../hooks/useWhatsAppLink.js'
 
 export default function Hero() {
-  const whatsappHref = useWhatsAppLink()
+  const whatsappHref = useWhatsAppLink(
+    'Olá! Gostaria de agendar uma visita ao CEI Pequeno Coração.'
+  )
 
   return (
     <section id="inicio" className="relative overflow-hidden bg-sun-50 pb-28 pt-16 sm:pt-20">
@@ -25,11 +27,10 @@ export default function Hero() {
           </span>
 
           <h1 className="text-4xl font-bold leading-tight text-ink-950 sm:text-5xl lg:text-[3.2rem]">
-            Um lugar cheio de carinho para o seu filho crescer e descobrir o mundo
+            Da Itoupava Central pra dentro de casa: seu filho cresce a poucos minutos daqui.
           </h1>
 
           <p className="max-w-xl text-lg leading-relaxed text-ink-600">
-            {/* TODO: substituir por texto real de apresentação da creche */}
             No CEI Pequeno Coração, cada criança é acolhida com atenção individual, rotina
             estruturada e muito afeto — para que os pais tenham tranquilidade e os pequenos,
             momentos inesquecíveis de aprendizado.
@@ -38,10 +39,10 @@ export default function Hero() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button href={whatsappHref} target="_blank" rel="noopener noreferrer" variant="primary">
               <WhatsAppIcon />
-              Matricule-se agora
+              Agende uma visita
             </Button>
-            <Button as="a" href="#metodologia" variant="outline">
-              Conheça nossa proposta
+            <Button as="a" href="#rotina" variant="outline">
+              Veja um dia na Pequeno Coração
             </Button>
           </div>
         </div>
