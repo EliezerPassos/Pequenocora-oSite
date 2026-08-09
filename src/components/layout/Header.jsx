@@ -52,19 +52,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-bloom-100 bg-cream-50/95 backdrop-blur-sm">
       <Container className="flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold text-bloom-700">
+        <Link to="/" aria-label={siteInfo.name} className="flex items-center gap-2.5 font-display text-lg font-bold text-bloom-700">
           <img
             src="/logocoracao.jpg"
-            alt=""
+            alt={siteInfo.name}
             className="h-11 w-11 shrink-0 rounded-full border-[3px] border-white object-cover shadow-soft transition-transform duration-150 ease-out"
             style={{
               transform: `scale(${logoScale}) rotate(${(logoScale - 1) * -3.5}deg)`,
               transformOrigin: 'top left',
             }}
           />
-          <span className="leading-tight">
-            {siteInfo.name}
-          </span>
         </Link>
 
         <div className="relative" ref={menuRef}>
