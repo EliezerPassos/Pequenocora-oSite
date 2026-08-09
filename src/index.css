@@ -9,6 +9,8 @@
 @theme {
   --font-display: "Baloo 2", "Comic Sans MS", system-ui, sans-serif;
   --font-body: "Nunito Sans", system-ui, -apple-system, sans-serif;
+  /* Alternativa gratuita ao Avenir (pago) — usar pontualmente em destaques/estatísticas, ex: font-family: var(--font-accent) */
+  --font-accent: "Poppins", system-ui, sans-serif;
 
   /* Amarelo — sol, alegria */
   --color-sun-50: #fffbeb;
