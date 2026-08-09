@@ -27,6 +27,15 @@ export const siteInfo = {
   },
 }
 
+// Páginas (rotas) do site — usado no menu do header pra listar só os
+// destinos que não são a página atual. Diferente de navLinks (âncoras
+// da home, usadas no rodapé).
+export const routePages = [
+  { label: 'Início', href: '/' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Metodologia', href: '/metodologia' },
+]
+
 export const navLinks = [
   { label: 'Início', href: '#inicio' },
   { label: 'Referência em cuidado', href: '#referencia-em-cuidado' },

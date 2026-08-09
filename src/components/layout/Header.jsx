@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Container from '../ui/Container.jsx'
-import { navLinks, siteInfo } from '../../data/content.js'
+import { routePages, siteInfo } from '../../data/content.js'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [logoScale, setLogoScale] = useState(1)
   const menuRef = useRef(null)
+  const { pathname } = useLocation()
 
   // Fecha o menu ao clicar fora dele
   useEffect(() => {
@@ -90,8 +91,8 @@ export default function Header() {
               className="absolute right-0 top-[calc(100%+12px)] w-64 rounded-2xl border border-bloom-100 bg-cream-50 p-2 shadow-soft"
             >
               <ul className="flex flex-col gap-1">
-                {navLinks
-                  .filter((link) => !link.href.startsWith('#'))
+                {routePages
+                  .filter((link) => link.href !== pathname)
                   .map((link) => (
                     <li key={link.href}>
                       <Link
