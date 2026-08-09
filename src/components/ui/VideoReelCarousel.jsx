@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { PlayButton } from './VideoCard.jsx'
 import QuoteReelCard from './QuoteReelCard.jsx'
+import CtaReelCard from './CtaReelCard.jsx'
 import { Heart } from '../../assets/illustrations/index.js'
 
 // Carrossel de vídeos em formato retrato, inspirado no bloco "Parents Love Primrose"
@@ -23,7 +24,9 @@ export default function VideoReelCarousel({ videos, onPlay }) {
         className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {videos.map((video, index) =>
-          video.quote ? (
+          video.cta ? (
+            <CtaReelCard key={video.title} label={video.title} to={video.ctaHref} />
+          ) : video.quote ? (
             <QuoteReelCard
               key={video.title}
               quote={video.quote}

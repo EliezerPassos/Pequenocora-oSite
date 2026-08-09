@@ -19,14 +19,53 @@ export default function Hero() {
       <Star className="pointer-events-none absolute left-[8%] top-[62%] h-7 w-7 text-sun-500 sm:h-9 sm:w-9" />
       <Star className="pointer-events-none absolute right-[12%] top-16 h-5 w-5 text-bloom-400" />
 
-      <Container className="relative grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
-        <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+      {/* Painel mobile: conteúdo ancorado no rodapé de um painel de foto em tela cheia */}
+      <Container className="relative lg:hidden">
+        <div className="relative min-h-[560px] overflow-hidden rounded-[32px] bg-sun-300 shadow-soft">
+          {/* TODO: substituir por foto real das crianças/estrutura da creche */}
+          <div className="absolute inset-0 flex items-center justify-center text-bloom-800">
+            <Heart className="h-20 w-20" />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
+
+          <div className="relative z-10 flex h-full flex-col justify-end gap-8 px-6 pb-8 pt-16">
+            <div className="flex flex-col gap-2">
+              <span className="font-display text-sm font-semibold text-cream-50/90">
+                Itoupava Central, Blumenau/SC
+              </span>
+              <h1 className="text-3xl font-bold leading-tight text-cream-50">
+                Da Itoupava Central pra dentro de casa: seu filho cresce a poucos minutos daqui.
+              </h1>
+            </div>
+
+            <div className="flex w-full flex-col gap-3">
+              <Button
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+                className="w-full justify-center"
+              >
+                <WhatsAppIcon />
+                Agende uma visita
+              </Button>
+              <Button as="a" href="#rotina" variant="secondary" className="w-full justify-center">
+                Veja um dia na Pequeno Coração
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Container>
+
+      {/* Layout desktop: texto ao lado da ilustração */}
+      <Container className="relative hidden items-center gap-14 lg:grid lg:grid-cols-2 lg:gap-10">
+        <div className="flex flex-col items-start gap-6 text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 font-display text-sm font-semibold text-bloom-600 shadow-soft">
             <Heart className="h-4 w-4 text-bloom-500" />
             Itoupava Central, Blumenau/SC
           </span>
 
-          <h1 className="text-4xl font-bold leading-tight text-ink-950 sm:text-5xl lg:text-[3.2rem]">
+          <h1 className="text-4xl font-bold leading-tight text-ink-950 lg:text-[3.2rem]">
             Da Itoupava Central pra dentro de casa: seu filho cresce a poucos minutos daqui.
           </h1>
 
