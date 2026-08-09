@@ -27,12 +27,12 @@ export default function Hero() {
           <AutoPhotoCarousel />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
 
-          <div className="relative z-10 flex h-full flex-col gap-8 px-6 pb-8 pt-16">
+          <div className="absolute inset-0 z-10 flex flex-col gap-8 px-6 pb-8 pt-16">
             <div className="flex flex-col gap-2">
-              <span className="font-display text-sm font-semibold text-cream-50/90">
+              <span className="font-display text-sm font-semibold text-cream-50/80">
                 Itoupava Central, Blumenau/SC
               </span>
-              <h1 className="text-3xl font-bold leading-tight text-cream-50">
+              <h1 className="text-3xl font-bold leading-tight text-cream-50/85">
                 Da Itoupava Central pra dentro de casa: seu filho cresce a poucos minutos daqui.
               </h1>
             </div>
