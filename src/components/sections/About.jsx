@@ -1,7 +1,7 @@
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
-import { Blob, Blocks, Heart, TornEdge } from '../../assets/illustrations/index.js'
-import { values } from '../../data/content.js'
+import { Blob, Blocks, TornEdge } from '../../assets/illustrations/index.js'
+import StickyFeatureTabs from './StickyFeatureTabs.jsx'
 
 export default function About() {
   return (
@@ -43,28 +43,8 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {values.map((value, index) => {
-            const isPurple = index % 2 === 0
-            return (
-              <div
-                key={value.title}
-                className="paper-card flex flex-col gap-4 p-6 transition-transform duration-200 hover:-translate-y-1"
-              >
-                <span
-                  className={`flex h-12 w-12 items-center justify-center rounded-2xl ${
-                    isPurple ? 'bg-bloom-50' : 'bg-sun-100'
-                  }`}
-                >
-                  <Heart className={`h-6 w-6 ${isPurple ? 'text-bloom-600' : 'text-sun-600'}`} />
-                </span>
-                <h3 className="font-display text-lg font-bold text-bloom-700">
-                  {value.title}
-                </h3>
-                <p className="leading-relaxed text-ink-600">{value.description}</p>
-              </div>
-            )
-          })}
+        <div className="mt-20">
+          <StickyFeatureTabs />
         </div>
       </Container>
 

@@ -66,24 +66,44 @@ export const biaPlaylist = [
 
 export const values = [
   {
-    title: 'Acolhimento',
+    tab: 'Acolhimento',
+    icon: 'Heart',
+    color: 'bloom',
+    title: 'Cada criança recebida como é',
     description:
-      'Cada criança é recebida com carinho, respeito ao seu tempo e atenção às suas particularidades.',
+      'Cada criança é recebida com carinho, respeito ao seu tempo e atenção às suas particularidades — sem pressa, sem comparação, no ritmo dela.',
+    ctaLabel: 'Conheça nossa proposta pedagógica',
+    ctaHref: '#metodologia',
   },
   {
-    title: 'Segurança',
+    tab: 'Segurança',
+    icon: 'Blocks',
+    color: 'sun',
+    title: 'Cuidado que os pais sentem',
     description:
-      'Ambiente seguro e supervisionado, com equipe qualificada e protocolos claros de cuidado.',
+      'Ambiente seguro e supervisionado, com equipe qualificada e protocolos claros de cuidado em cada fase do dia.',
+    ctaLabel: 'Veja nossa estrutura',
+    ctaHref: '#estrutura',
   },
   {
-    title: 'Aprendizado lúdico',
+    tab: 'Aprendizado lúdico',
+    icon: 'Sun',
+    color: 'bloom',
+    title: 'Aprender brincando, todos os dias',
     description:
-      'Aprender brincando: estimulamos a curiosidade natural das crianças por meio de atividades sensoriais e criativas.',
+      'Estimulamos a curiosidade natural das crianças por meio de atividades sensoriais e criativas, respeitando cada fase do desenvolvimento.',
+    ctaLabel: 'Veja a rotina diária',
+    ctaHref: '#rotina',
   },
   {
-    title: 'Parceria com a família',
+    tab: 'Parceria com a família',
+    icon: 'Star',
+    color: 'sun',
+    title: 'Conectados com o seu dia a dia',
     description:
-      'Comunicação próxima e transparente com os pais e responsáveis em cada etapa do desenvolvimento.',
+      'Comunicação próxima e transparente com os pais e responsáveis em cada etapa do desenvolvimento do seu filho.',
+    ctaLabel: 'Fale com a gente',
+    ctaHref: '#contato',
   },
 ]
 

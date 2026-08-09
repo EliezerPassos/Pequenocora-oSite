@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
 import Button from '../ui/Button.jsx'
-import VideoCard from '../ui/VideoCard.jsx'
+import VideoReelCarousel from '../ui/VideoReelCarousel.jsx'
 import VideoModal from '../ui/VideoModal.jsx'
 import { Star, TornEdge } from '../../assets/illustrations/index.js'
 import { biaPlaylist } from '../../data/content.js'
@@ -25,10 +25,8 @@ export default function BiaPlaylist() {
           description="Em breve, uma página inteira com vídeos e artigos da Bia sobre rotina, alimentação, birra, sono e os cuidados da primeira infância. Comece pelos primeiros episódios."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {biaPlaylist.map((video, index) => (
-            <VideoCard key={video.title} video={video} index={index} onPlay={setActiveVideo} />
-          ))}
+        <div className="mt-14">
+          <VideoReelCarousel videos={biaPlaylist} onPlay={setActiveVideo} />
         </div>
 
         <div className="mt-10 flex justify-center">

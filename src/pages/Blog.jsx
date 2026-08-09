@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Container from '../components/ui/Container.jsx'
 import SectionHeading from '../components/ui/SectionHeading.jsx'
-import VideoCard from '../components/ui/VideoCard.jsx'
+import VideoReelCarousel from '../components/ui/VideoReelCarousel.jsx'
 import VideoModal from '../components/ui/VideoModal.jsx'
 import { Star, TornEdge } from '../assets/illustrations/index.js'
 import { biaPlaylist } from '../data/content.js'
@@ -35,10 +35,8 @@ export default function Blog() {
       <section className="bg-cream-50 py-16 sm:py-20">
         <Container>
           <h2 className="font-display text-2xl font-bold text-bloom-700">Playlist de vídeos</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {biaPlaylist.map((video, index) => (
-              <VideoCard key={video.title} video={video} index={index} onPlay={setActiveVideo} />
-            ))}
+          <div className="mt-8">
+            <VideoReelCarousel videos={biaPlaylist} onPlay={setActiveVideo} />
           </div>
         </Container>
       </section>
