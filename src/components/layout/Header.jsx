@@ -54,17 +54,10 @@ export default function Header() {
               className="absolute right-0 top-[calc(100%+12px)] w-64 rounded-2xl border border-bloom-100 bg-cream-50 p-2 shadow-soft"
             >
               <ul className="flex flex-col gap-1">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    {link.href.startsWith('#') ? (
-                      <a
-                        href={`/${link.href}`}
-                        onClick={() => setIsOpen(false)}
-                        className="block rounded-xl px-3 py-2.5 font-medium text-ink-800 hover:bg-bloom-50 hover:text-bloom-700"
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
+                {navLinks
+                  .filter((link) => !link.href.startsWith('#'))
+                  .map((link) => (
+                    <li key={link.href}>
                       <Link
                         to={link.href}
                         onClick={() => setIsOpen(false)}
@@ -72,9 +65,8 @@ export default function Header() {
                       >
                         {link.label}
                       </Link>
-                    )}
-                  </li>
-                ))}
+                    </li>
+                  ))}
               </ul>
             </nav>
           )}
