@@ -23,12 +23,12 @@ export default function StickyFeatureTabs() {
           <div
             key={value.tab}
             className={`sticky flex items-start justify-center pb-3 pt-[88px] sm:pb-4 sm:pt-[104px] ${
-              isLast ? 'h-dvh' : 'h-[115dvh] sm:h-[110dvh]'
+              isLast ? 'h-svh' : 'h-[115svh] sm:h-[110svh]'
             }`}
             style={{ top: `${72 + index * 110}px`, zIndex: index + 1 }}
           >
             <article
-              className={`flex h-[62dvh] w-full max-w-4xl flex-col overflow-hidden rounded-[28px] shadow-soft sm:h-[66dvh] sm:rounded-[32px] lg:h-[70dvh] ${
+              className={`flex h-[62svh] w-full max-w-4xl flex-col overflow-hidden rounded-[28px] shadow-soft sm:h-[66svh] sm:rounded-[32px] lg:h-[70svh] ${
                 isPurple ? 'bg-bloom-50' : 'bg-sun-50'
               }`}
             >
