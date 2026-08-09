@@ -22,7 +22,7 @@ export default function StickyFeatureTabs() {
           <div
             key={value.tab}
             className="sticky flex h-dvh items-center justify-center py-3 sm:py-4"
-            style={{ top: `${72 + index * 28}px`, zIndex: index + 1 }}
+            style={{ top: `${72 + index * 110}px`, zIndex: index + 1 }}
           >
             <article
               className={`flex h-[78dvh] w-full max-w-4xl flex-col overflow-hidden rounded-[28px] shadow-soft sm:h-[82dvh] sm:rounded-[32px] lg:h-[85dvh] ${
