@@ -126,6 +126,12 @@ export const ageGroups = [
     description:
       'Preparação para a alfabetização, raciocínio lógico, socialização e projetos pedagógicos temáticos.',
   },
+  {
+    range: 'Contraturno',
+    ages: '6 a 14 anos',
+    description:
+      'Apoio nas tarefas escolares, atividades recreativas e esportivas para quem já está na escola regular.',
+  },
 ]
 
 export const dailyRoutine = [

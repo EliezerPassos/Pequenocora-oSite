@@ -18,7 +18,7 @@ export default function Methodology() {
           description="Nossa metodologia respeita as particularidades de cada faixa etária, com atividades que estimulam a autonomia, a criatividade e o convívio social."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ageGroups.map((group) => (
             <div
               key={group.range}
