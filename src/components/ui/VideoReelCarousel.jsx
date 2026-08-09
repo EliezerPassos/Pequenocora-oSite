@@ -48,10 +48,9 @@ export default function VideoReelCarousel({ videos, onPlay }) {
               // assim que a gravação/autorização estiver pronta.
               <video
                 src={video.videoSrc}
-                autoPlay
                 muted
-                loop
                 playsInline
+                preload="metadata"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             ) : video.youtubeId ? (
