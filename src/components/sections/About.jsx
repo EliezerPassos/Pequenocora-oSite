@@ -1,11 +1,11 @@
 import Container from '../ui/Container.jsx'
 import SectionHeading from '../ui/SectionHeading.jsx'
-import { Blob, Blocks, TornEdge } from '../../assets/illustrations/index.js'
-import StickyFeatureTabs from './StickyFeatureTabs.jsx'
+import { Blob, Blocks, Heart } from '../../assets/illustrations/index.js'
+import { values } from '../../data/content.js'
 
 export default function About() {
   return (
-    <section id="sobre" className="relative overflow-hidden bg-cream-50 py-20 sm:py-28">
+    <section id="sobre" className="bg-cream-50 py-20 sm:py-28">
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div className="relative mx-auto aspect-[4/3] w-full max-w-lg order-2 lg:order-1">
@@ -43,12 +43,30 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-20">
-          <StickyFeatureTabs />
+        <div className="mt-20 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {values.map((value, index) => {
+            const isPurple = index % 2 === 0
+            return (
+              <div
+                key={value.tab}
+                className="paper-card flex flex-col gap-4 p-6 transition-transform duration-200 hover:-translate-y-1"
+              >
+                <span
+                  className={`flex h-12 w-12 items-center justify-center rounded-2xl ${
+                    isPurple ? 'bg-bloom-50' : 'bg-sun-100'
+                  }`}
+                >
+                  <Heart className={`h-6 w-6 ${isPurple ? 'text-bloom-600' : 'text-sun-600'}`} />
+                </span>
+                <h3 className="font-display text-lg font-bold text-bloom-700">
+                  {value.tab}
+                </h3>
+                <p className="leading-relaxed text-ink-600">{value.description}</p>
+              </div>
+            )
+          })}
         </div>
       </Container>
-
-      <TornEdge className="absolute -bottom-px left-0 h-16 w-full text-bloom-700" />
     </section>
   )
 }
