@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react'
 
-const photos = ['/Cards/pexels-julianemonarifotografia-23174613.jpg', '/Cards/pexels-rebornfilmes-30478351.jpg', '/Cards/6c392b3a-47a1-490b-9efc-93812fcf5f48.jpg']
+const photos = [
+  '/Cards/pexels-julianemonarifotografia-23174613.jpg',
+  '/Cards/pexels-julianemonarifotografia-23174615.jpg',
+  '/Cards/pexels-pavel-danilyuk-8422169.jpg',
+  '/Cards/pexels-rebornfilmes-30478351.jpg',
+]
 
 // Carrossel automático de fotos — troca sozinho a cada poucos segundos, com fade suave
 export default function AutoPhotoCarousel({ className = '' }) {
