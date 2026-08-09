@@ -23,7 +23,7 @@ export default function StickyFeatureTabs() {
           <div
             key={value.tab}
             className={`sticky flex items-start justify-center pb-3 pt-[88px] sm:pb-4 sm:pt-[104px] ${
-              isLast ? 'h-dvh' : 'h-[180dvh] sm:h-[140dvh]'
+              isLast ? 'h-dvh' : 'h-[115dvh] sm:h-[110dvh]'
             }`}
             style={{ top: `${72 + index * 110}px`, zIndex: index + 1 }}
           >
