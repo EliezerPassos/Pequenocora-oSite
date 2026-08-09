@@ -47,7 +47,7 @@ export const biaPlaylist = [
   {
     title: 'Um dia na Pequeno Coração',
     description: 'Do acolhimento da manhã até a saída — como é a rotina completa dos pequenos.',
-    youtubeId: 'Kg_xGvZwmRY',
+    youtubeId: 'YRuaP2HWNoA',
   },
   {
     title: 'Hora da leitura',
