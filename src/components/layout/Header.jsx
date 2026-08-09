@@ -6,6 +6,7 @@ import { routePages, siteInfo } from '../../data/content.js'
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [logoScale, setLogoScale] = useState(1)
+  const [menuIconScale, setMenuIconScale] = useState(1)
   const menuRef = useRef(null)
   const { pathname } = useLocation()
 
@@ -19,20 +20,20 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isOpen])
 
-  // No mobile, o ícone começa bem maior no topo da página e encolhe até o
-  // tamanho normal nos primeiros ~100px de scroll — só nessa faixa de tela.
+  // No topo da página, o logo e o botão do menu começam bem maiores e encolhem
+  // gradualmente até o tamanho normal conforme a página rola — o botão do
+  // menu, além disso, "invade" a seção abaixo do header nesse estado inicial.
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
     let frameId
     const handleScroll = () => {
-      if (window.innerWidth >= 640) {
-        setLogoScale(1)
-        return
-      }
-      const progress = Math.min(window.scrollY / 100, 1)
-      setLogoScale(1.8 - progress * 0.8)
+      const isMobile = window.innerWidth < 640
+      const progress = Math.min(window.scrollY / (isMobile ? 100 : 140), 1)
+
+      setLogoScale(isMobile ? 1.8 - progress * 0.8 : 1)
+      setMenuIconScale((isMobile ? 2.3 : 1.4) - progress * ((isMobile ? 2.3 : 1.4) - 1))
     }
     const onScroll = () => {
       cancelAnimationFrame(frameId)
@@ -67,18 +68,22 @@ export default function Header() {
         <div className="relative" ref={menuRef}>
           <button
             type="button"
-            className="flex h-11 w-11 items-center justify-center rounded-full text-bloom-700 transition-colors hover:bg-bloom-50"
+            className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-white bg-bloom-600 text-cream-50 shadow-soft transition-[background-color,transform] duration-150 ease-out hover:bg-bloom-700"
+            style={{
+              transform: `scale(${menuIconScale}) rotate(${(menuIconScale - 1) * -3.5}deg)`,
+              transformOrigin: 'top right',
+            }}
             aria-expanded={isOpen}
             aria-controls="main-menu"
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
             onClick={() => setIsOpen((v) => !v)}
           >
             {isOpen ? (
-              <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
                 <path d="M6 6l12 12M18 6L6 18" />
               </svg>
             ) : (
-              <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
                 <path d="M4 7h16M4 12h16M4 17h16" />
               </svg>
             )}
