@@ -71,6 +71,7 @@ export const values = [
     tab: 'Acolhimento',
     icon: 'Heart',
     color: 'bloom',
+    photo: '/Referencia/pexels-kseniachernaya-8535568.jpg',
     title: 'Cada criança recebida como é',
     description:
       'Cada criança é recebida com carinho, respeito ao seu tempo e atenção às suas particularidades — sem pressa, sem comparação, no ritmo dela.',
@@ -81,6 +82,7 @@ export const values = [
     tab: 'Segurança',
     icon: 'Blocks',
     color: 'sun',
+    photo: '/Referencia/pexels-pavel-danilyuk-8422169.jpg',
     title: 'Cuidado que os pais sentem',
     description:
       'Ambiente seguro e supervisionado, com equipe qualificada e protocolos claros de cuidado em cada fase do dia.',
@@ -91,6 +93,7 @@ export const values = [
     tab: 'Aprendizado lúdico',
     icon: 'Sun',
     color: 'bloom',
+    photo: '/Referencia/pexels-pavel-danilyuk-8441839.jpg',
     title: 'Aprender brincando, todos os dias',
     description:
       'Estimulamos a curiosidade natural das crianças por meio de atividades sensoriais e criativas, respeitando cada fase do desenvolvimento.',
@@ -101,6 +104,7 @@ export const values = [
     tab: 'Parceria com a família',
     icon: 'Star',
     color: 'sun',
+    photo: '/Referencia/pexels-yankrukov-8612955.jpg',
     title: 'Conectados com o seu dia a dia',
     description:
       'Comunicação próxima e transparente com os pais e responsáveis em cada etapa do desenvolvimento do seu filho.',

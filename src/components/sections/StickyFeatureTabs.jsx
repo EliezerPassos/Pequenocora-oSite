@@ -77,17 +77,11 @@ export default function StickyFeatureTabs() {
             e o card de texto flutua por cima, alinhado à esquerda (igual à referência) */}
         <div className="relative mt-8 lg:min-h-[560px]">
           <div className="relative overflow-hidden rounded-[32px] lg:absolute lg:inset-y-0 lg:right-0 lg:left-[300px]">
-            {/* TODO: substituir pela foto real correspondente a cada diferencial */}
-            <div
-              className={`flex aspect-[4/3] h-full w-full items-center justify-center lg:aspect-auto ${
-                isPurple ? 'bg-bloom-200' : 'bg-sun-300'
-              }`}
-            >
-              <div className="flex flex-col items-center gap-3 text-bloom-800">
-                <ActiveIcon className="h-16 w-16" />
-                <span className="font-display text-sm font-semibold">Foto ilustrativa — em breve</span>
-              </div>
-            </div>
+            <img
+              src={active.photo}
+              alt={active.title}
+              className="aspect-[4/3] h-full w-full object-cover lg:aspect-auto"
+            />
           </div>
 
           <div
