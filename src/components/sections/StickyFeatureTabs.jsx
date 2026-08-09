@@ -39,10 +39,11 @@ export default function StickyFeatureTabs() {
   const isPurple = active.color === 'bloom'
 
   return (
-    <div className="relative lg:h-[2560px]">
+    <div className="relative h-[3200px] lg:h-[2560px]">
       {/* Marcadores invisíveis: cada um ocupa uma fatia do scroll e ativa sua aba
-          correspondente quando cruza o centro da tela (só importa no desktop). */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
+          correspondente quando cruza o centro da tela — em qualquer tamanho de tela,
+          o scroll é "travado" nessa seção até passar pelos 4 cards. */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         {values.map((value, index) => (
           <div
             key={value.tab}
@@ -53,7 +54,7 @@ export default function StickyFeatureTabs() {
         ))}
       </div>
 
-      <div className="lg:sticky lg:top-[120px]">
+      <div className="sticky top-[100px] lg:top-[120px]">
         <div className="flex flex-wrap items-center justify-center gap-2 rounded-full bg-bloom-50 p-2 lg:mx-auto lg:w-fit">
           {values.map((value, index) => (
             <button
