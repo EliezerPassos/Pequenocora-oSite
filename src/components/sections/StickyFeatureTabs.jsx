@@ -17,11 +17,14 @@ export default function StickyFeatureTabs() {
       {values.map((value, index) => {
         const Icon = icons[value.icon]
         const isPurple = value.color === 'bloom'
+        const isLast = index === values.length - 1
 
         return (
           <div
             key={value.tab}
-            className="sticky flex h-[180dvh] items-start justify-center pb-3 pt-[88px] sm:h-[140dvh] sm:pb-4 sm:pt-[104px]"
+            className={`sticky flex items-start justify-center pb-3 pt-[88px] sm:pb-4 sm:pt-[104px] ${
+              isLast ? 'h-dvh' : 'h-[180dvh] sm:h-[140dvh]'
+            }`}
             style={{ top: `${72 + index * 110}px`, zIndex: index + 1 }}
           >
             <article
