@@ -7,10 +7,10 @@
   - Preto (tom "tinta" quente, nunca 100% puro) = apoio, textos e contornos
 */
 @theme {
-  --font-display: "Baloo 2", "Comic Sans MS", system-ui, sans-serif;
-  --font-body: "Nunito Sans", system-ui, -apple-system, sans-serif;
-  /* Alternativa gratuita ao Avenir (pago) — usar pontualmente em destaques/estatísticas, ex: font-family: var(--font-accent) */
-  --font-accent: "Poppins", system-ui, sans-serif;
+  --font-display: "Satoshi", system-ui, sans-serif;
+  --font-body: "Satoshi", system-ui, -apple-system, sans-serif;
+  /* Usar pontualmente em destaques/estatísticas, ex: font-family: var(--font-accent) */
+  --font-accent: "Satoshi", system-ui, sans-serif;
 
   /* Amarelo — sol, alegria */
   --color-sun-50: #fffbeb;
