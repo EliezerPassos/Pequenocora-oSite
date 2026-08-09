@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Páginas/arquivos de referência salvos do navegador (conteúdo de terceiros —
+# nunca deve ir para o repositório público nem para o deploy)
+public/*.html
+public/*_files/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
