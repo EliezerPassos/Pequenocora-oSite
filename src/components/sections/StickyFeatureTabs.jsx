@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Heart, Blocks, Sun, Star, Blob } from '../../assets/illustrations/index.js'
+import { Heart, Blocks, Sun, Star } from '../../assets/illustrations/index.js'
 import { values } from '../../data/content.js'
 
 const icons = { Heart, Blocks, Sun, Star }
@@ -72,9 +72,25 @@ export default function StickyFeatureTabs() {
           ))}
         </div>
 
-        <div className="mt-8 grid items-center gap-8 lg:min-h-[560px] lg:grid-cols-2 lg:gap-14">
+        {/* Foto e card sobrepostos — a foto ocupa o painel inteiro por trás,
+            e o card de texto flutua por cima, alinhado à esquerda (igual à referência) */}
+        <div className="relative mt-8 lg:min-h-[560px]">
+          <div className="relative overflow-hidden rounded-[32px] lg:absolute lg:inset-y-0 lg:right-0 lg:left-[300px]">
+            {/* TODO: substituir pela foto real correspondente a cada diferencial */}
+            <div
+              className={`flex aspect-[4/3] h-full w-full items-center justify-center lg:aspect-auto ${
+                isPurple ? 'bg-bloom-200' : 'bg-sun-300'
+              }`}
+            >
+              <div className="flex flex-col items-center gap-3 text-bloom-800">
+                <ActiveIcon className="h-16 w-16" />
+                <span className="font-display text-sm font-semibold">Foto ilustrativa — em breve</span>
+              </div>
+            </div>
+          </div>
+
           <div
-            className={`paper-card flex flex-col gap-4 p-8 sm:p-10 ${
+            className={`paper-card relative z-10 mt-6 flex flex-col gap-4 p-8 sm:p-10 lg:mt-0 lg:max-w-[380px] lg:self-start ${
               isPurple ? 'bg-bloom-50' : 'bg-sun-50'
             }`}
           >
@@ -96,21 +112,6 @@ export default function StickyFeatureTabs() {
                 <path d="M9 6l6 6-6 6" />
               </svg>
             </a>
-          </div>
-
-          <div className="relative mx-auto aspect-square w-full max-w-sm">
-            {/* TODO: substituir pela foto real correspondente a cada diferencial */}
-            <Blob className={`absolute inset-0 h-full w-full ${isPurple ? 'text-sun-200' : 'text-bloom-200'}`} />
-            <div
-              className={`photo-sticker photo-sticker--tilt-left absolute inset-10 flex items-center justify-center ${
-                isPurple ? 'bg-bloom-100' : 'bg-sun-300'
-              }`}
-            >
-              <div className="flex flex-col items-center gap-3 text-bloom-800">
-                <ActiveIcon className="h-16 w-16" />
-                <span className="font-display text-sm font-semibold">Foto ilustrativa — em breve</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
