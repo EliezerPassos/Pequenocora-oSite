@@ -30,7 +30,7 @@ export default function Header() {
     const handleScroll = () => {
       const isMobile = window.innerWidth < 640
       const progress = Math.min(window.scrollY / (isMobile ? 100 : 140), 1)
-      const maxScale = isMobile ? 2.3 : 1.4
+      const maxScale = isMobile ? 2.76 : 1.68
 
       setLogoScale(maxScale - progress * (maxScale - 1))
     }
